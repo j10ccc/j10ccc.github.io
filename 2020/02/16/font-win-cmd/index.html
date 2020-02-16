@@ -13,15 +13,15 @@
 <meta property="og:site_name" content="J10c&#39;Blog">
 <meta property="og:description" content="背景这几天因为疫情，学校在网上开课，但我又刚买了2只舵机，得在树莓派上先搭建好环境，于是就一边上课一边搭建，因为网课限制Windows平台，所以使用git连到了树莓派，但是我发现了一个严重的问题——cmd的字体不是等宽的！  默认的新宋体  不得不承认的是，在中文环境下，PowerShell 默认 的「新宋体」确实很（zhen）不（ta）耐（ma）看（chou）。然而由于默认 PowerShell">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/3p6D0I.png">
-<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/3p6yAP.png">
-<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/3p6ch8.png">
-<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/3p2iOH.png">
+<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/39VeL6.png">
+<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/39VneK.png">
+<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/39VudO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2020/02/16/39VZsx.png">
 <meta property="article:published_time" content="2020-02-16T11:51:36.000Z">
-<meta property="article:modified_time" content="2020-02-16T11:52:19.313Z">
+<meta property="article:modified_time" content="2020-02-16T14:16:20.467Z">
 <meta property="article:author" content="J10c">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.ax1x.com/2020/02/16/3p6D0I.png">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/02/16/39VeL6.png">
     
     
         
@@ -149,7 +149,7 @@
 
   <div class="content" itemprop="articleBody">
     <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这几天因为疫情，学校在网上开课，但我又刚买了2只舵机，得在树莓派上先搭建好环境，于是就一边上课一边搭建，因为网课限制Windows平台，所以使用<code>git</code>连到了树莓派，但是我发现了一个严重的问题——cmd的字体不是等宽的！</p>
-<p><img src="https://s2.ax1x.com/2020/02/16/3p6D0I.png" alt="3p6D0I.png"></p>
+<p><img src="https://s2.ax1x.com/2020/02/16/39VeL6.png" alt="39VeL6.png"></p>
 <center><small>默认的新宋体</small></center>
 
 <p>不得不承认的是，在中文环境下，PowerShell 默认 的「新宋体」确实很（zhen）不（ta）耐（ma）看（chou）。然而由于默认 PowerShell 终端是一个非常底层的应用，其界面甚至没有使用通用 UI 渲染框架来实现，而是直接调用底层 Windows API 来实现，因此其字体要求非常严格。这也是我们不能将任意一个等宽字体替换上去的原因。 </p>
@@ -180,16 +180,22 @@
 <li><a href="https://github.com/be5invis/Sarasa-Gothic/releases" target="_blank" rel="noopener">更纱黑体</a></li>
 </ol>
 <p>Microsoft YaHei Mono 是微软为 <a href="https://www.microsoft.com/zh-cn/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab#" target="_blank" rel="noopener">Ubuntu on Windows</a> 设计的一款等宽字体，正好可以拿来给自家的Powershell用，但是它渲染的汉字却有些奇怪。</p>
-<p><img src="https://s2.ax1x.com/2020/02/16/3p6yAP.png" alt="3p6yAP.png"></p>
+<p><img src="https://s2.ax1x.com/2020/02/16/39VneK.png" alt="39VneK.png"></p>
 <center><small>Microsoft YaHei Mono</small></center>
 
+
+
+
+
 <p>更纱黑体较圆润的 Microsoft YaHei Mono，更为修长。</p>
-<p><img src="https://s2.ax1x.com/2020/02/16/3p6ch8.png" alt="3p6ch8.png"></p>
+<p><img src="https://s2.ax1x.com/2020/02/16/39VudO.png" alt="39VudO.png"></p>
 <center><small>更纱黑体</small></center>
 
 
 
-<p><img src="https://s2.ax1x.com/2020/02/16/3p2iOH.png" alt="3p2iOH.png"></p>
+
+
+<p><img src="https://s2.ax1x.com/2020/02/16/39VZsx.png" alt="39VZsx.png"></p>
 <center><small>两种字体在同字号（28）下渲染汉字对比</small></center>
 
 <p>仔细看可以发现 Microsoft YaHei Mono 因为渲染的字符相对较大，所以显示得更清晰，而更纱黑体却有些发虚（1080P截图），但对汉字的结构尺寸方面更纱黑体控制得更好，Microsoft YaHei Mono 渲染的汉字笔画粗细不均。</p>
