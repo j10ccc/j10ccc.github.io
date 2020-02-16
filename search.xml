@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>对Windows终端的新宋体说拜拜</title>
+      <link href="/2020/02/16/font-win-cmd/"/>
+      <url>/2020/02/16/font-win-cmd/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这几天因为疫情，学校在网上开课，但我又刚买了2只舵机，得在树莓派上先搭建好环境，于是就一边上课一边搭建，因为网课限制Windows平台，所以使用<code>git</code>连到了树莓派，但是我发现了一个严重的问题——cmd的字体不是等宽的！</p><p><img src="https://s2.ax1x.com/2020/02/16/3p6D0I.png" alt="3p6D0I.png"></p><center><small>默认的新宋体</small></center><p>不得不承认的是，在中文环境下，PowerShell 默认 的「新宋体」确实很（zhen）不（ta）耐（ma）看（chou）。然而由于默认 PowerShell 终端是一个非常底层的应用，其界面甚至没有使用通用 UI 渲染框架来实现，而是直接调用底层 Windows API 来实现，因此其字体要求非常严格。这也是我们不能将任意一个等宽字体替换上去的原因。 </p><blockquote><p>The fonts must meet the following criteria to be available in a command session window:</p><ul><li><p>The font must be a fixed-pitch font.</p></li><li><p>The font cannot be an italic font.</p></li><li><p>The font cannot have a negative A or C space.</p></li><li><p>If it is a TrueType font, it must be FF_MODERN.</p></li><li><p>If it is not a TrueType font, it must be OEM_CHARSET. Additional criteria for Asian installations:</p></li><li><p>If it is not a TrueType font, the face name must be “Terminal.”</p></li><li><p>If it is an Asian TrueType font, it must also be an Asian character set.</p></li></ul></blockquote><center><small>微软对 cmd / Powershell 字体的限制</small></center><h2 id="两种字体"><a href="#两种字体" class="headerlink" title="两种字体"></a>两种字体</h2><p>虽然要求很严格，但仍然有一两款比较好的字体能兼容 Powershell / cmd ：</p><ol><li><a href="https://github.com/yakumioto/YaHei-Consolas-Hybrid-1.12" target="_blank" rel="noopener">Microsoft YaHei Mono</a></li><li><a href="https://github.com/be5invis/Sarasa-Gothic/releases" target="_blank" rel="noopener">更纱黑体</a></li></ol><p>Microsoft YaHei Mono 是微软为 <a href="https://www.microsoft.com/zh-cn/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab#" target="_blank" rel="noopener">Ubuntu on Windows</a> 设计的一款等宽字体，正好可以拿来给自家的Powershell用，但是它渲染的汉字却有些奇怪。</p><p><img src="https://s2.ax1x.com/2020/02/16/3p6yAP.png" alt="3p6yAP.png"></p><center><small>Microsoft YaHei Mono</small></center><p>更纱黑体较圆润的 Microsoft YaHei Mono，更为修长。</p><p><img src="https://s2.ax1x.com/2020/02/16/3p6ch8.png" alt="3p6ch8.png"></p><center><small>更纱黑体</small></center><p><img src="https://s2.ax1x.com/2020/02/16/3p2iOH.png" alt="3p2iOH.png"></p><center><small>两种字体在同字号（28）下渲染汉字对比</small></center><p>仔细看可以发现 Microsoft YaHei Mono 因为渲染的字符相对较大，所以显示得更清晰，而更纱黑体却有些发虚（1080P截图），但对汉字的结构尺寸方面更纱黑体控制得更好，Microsoft YaHei Mono 渲染的汉字笔画粗细不均。</p><h2 id="评语"><a href="#评语" class="headerlink" title="评语"></a>评语</h2><p>个人更喜欢更纱黑体，不喜欢  Microsoft YaHei Mono 对汉字的渲染。</p><p>如果有觉得Windows下字体发虚想修改系统的全局字体（微软雅黑）的，建议屏幕<strong>2K分辨率以上</strong>的使用 MacType。<del>1080P的就省省吧，越改越发虚</del></p><p>最后讲个笑话，微软自己出的 Windows Terminal，应用商店的软件截图中，Terminal 使用的字体是 FiraCode 。。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客更新日志</title>
       <link href="/2020/02/15/upblog/"/>
       <url>/2020/02/15/upblog/</url>
@@ -20,19 +33,6 @@
       <title>CSS学习笔记</title>
       <link href="/2020/02/15/css-l/"/>
       <url>/2020/02/15/css-l/</url>
-      
-        <content type="html"><![CDATA[<h1 id="待更新…"><a href="#待更新…" class="headerlink" title="待更新…"></a>待更新…</h1>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>font-win-cmd</title>
-      <link href="/2020/02/15/font-win-cmd/"/>
-      <url>/2020/02/15/font-win-cmd/</url>
       
         <content type="html"><![CDATA[<h1 id="待更新…"><a href="#待更新…" class="headerlink" title="待更新…"></a>待更新…</h1>]]></content>
       
