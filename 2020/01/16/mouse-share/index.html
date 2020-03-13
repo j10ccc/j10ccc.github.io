@@ -14,7 +14,7 @@
 <meta property="og:description" content="前言当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便需重新配对，十分不方便。  这是因为蓝牙设备有一个配对密钥，计算机必须有这个密钥，才能与蓝牙鼠标配对。而两个操作系统上保存的配对密钥不同，因此每次切换系统都需要重新配对。  我们要做的便是设法令两个操作系统对蓝牙鼠标存有相同的配对密钥。  流程 在Linux中">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-16T12:30:04.000Z">
-<meta property="article:modified_time" content="2020-02-15T05:03:19.323Z">
+<meta property="article:modified_time" content="2020-03-13T03:36:37.481Z">
 <meta property="article:author" content="J10c">
 <meta property="article:tag" content="drives">
 <meta name="twitter:card" content="summary">
@@ -70,6 +70,8 @@
           <li><a href="/archives/">Writing</a></li>
          
           <li><a href="/friends/">Friends</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
          
           <li><a href="/search/">🔍</a></li>
         
@@ -161,7 +163,7 @@
 <p>重启至Linux，在系统设置中连接蓝牙鼠标<code>设置-- 蓝牙--开启--扫描设备--连接</code></p>
 <p>完成后，蓝牙鼠标在Linux系统中应该可以正常使用了。无论重启/待机，配对都不会丢失——除非再次按下了配对按钮。</p>
 <h3 id="2-获取Linux中的配对密钥"><a href="#2-获取Linux中的配对密钥" class="headerlink" title="2.获取Linux中的配对密钥"></a>2.获取Linux中的配对密钥</h3><p>Linux将蓝牙设备的配对信息存放在  <code>/var/lib/bluetooth/{计算机的蓝牙MAC}/{蓝牙设备的MAC}/info</code>中，需切换到root用户访问<code>/var/lib/bluetooth</code>。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ su <span class="comment">#切换到root用户，如果你是第一次使用root账户，那首先要重设置root用户的密码</span></span><br><span class="line"><span class="comment"># cd /var/lib/bluetooth/&#123;计算机的蓝牙MAC&#125;/&#123;蓝牙鼠标的MAC&#125;</span></span><br><span class="line"><span class="comment"># cat info</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ su <span class="comment">#切换到root用户，如果你是第一次使用root账户，那首先要重设置root用户的密码</span></span><br><span class="line">$ <span class="built_in">cd</span> /var/lib/bluetooth/&#123;计算机的蓝牙MAC&#125;/&#123;蓝牙鼠标的MAC&#125;</span><br><span class="line">$ cat info</span><br></pre></td></tr></table></figure>
 
 <p>找到以<code>Key=</code>开头的一行，后面的便是配对密钥。将其记录下来。</p>
 <p>如果<code>/{计算机的蓝牙MAC}/</code>下有多个蓝牙设备MAC目录，可根据每个目录中info文件中的Name=开头一行判断哪个是蓝牙鼠标。</p>
@@ -199,6 +201,8 @@
           <li><a href="/archives/">Writing</a></li>
          
           <li><a href="/friends/">Friends</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
          
           <li><a href="/search/">🔍</a></li>
         
