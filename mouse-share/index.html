@@ -11,7 +11,7 @@
 
     <title>
         
-          search - J10c&#39;Blog
+          Windows和Linux共享蓝牙鼠标 - J10c&#39;Blog
         
     </title>
 
@@ -153,15 +153,64 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <article id="page">
-  <h1>search</h1>
-  
-  
-</article>
+          <div class="book-post">
+  <h1 id="Windows和Linux共享蓝牙鼠标"><a href="#Windows和Linux共享蓝牙鼠标" class="headerlink" title="Windows和Linux共享蓝牙鼠标"></a>Windows和Linux共享蓝牙鼠标</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便需重新配对，十分不方便。 </p>
+<p>这是因为蓝牙设备有一个配对密钥，计算机必须有这个密钥，才能与蓝牙鼠标配对。而两个操作系统上保存的配对密钥不同，因此每次切换系统都需要重新配对。</p>
+<p> 我们要做的便是设法令两个操作系统对蓝牙鼠标存有相同的配对密钥。 </p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>在Linux中删除已配对的蓝牙鼠标并找到获取连接密钥 </li>
+<li>在Windows中修改原密钥并配对蓝牙鼠标 </li>
+<li>重启至Linux </li>
+</ol>
+<h3 id="1-在Linux中配对"><a href="#1-在Linux中配对" class="headerlink" title="1. 在Linux中配对"></a>1. 在Linux中配对</h3><p>这一步前提是在Windows下，蓝牙鼠标可以正常使用。</p>
+<p>重启至Linux，在系统设置中连接蓝牙鼠标<code>设置-- 蓝牙--开启--扫描设备--连接</code></p>
+<p>完成后，蓝牙鼠标在Linux系统中应该可以正常使用了。无论重启/待机，配对都不会丢失——除非再次按下了配对按钮。</p>
+<h3 id="2-获取Linux中的配对密钥"><a href="#2-获取Linux中的配对密钥" class="headerlink" title="2.获取Linux中的配对密钥"></a>2.获取Linux中的配对密钥</h3><p>Linux将蓝牙设备的配对信息存放在  <code>/var/lib/bluetooth/{计算机的蓝牙MAC}/{蓝牙设备的MAC}/info</code>中，需切换到root用户访问<code>/var/lib/bluetooth</code>。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ su <span class="comment">#切换到root用户，如果你是第一次使用root账户，那首先要重设置root用户的密码</span></span><br><span class="line">$ <span class="built_in">cd</span> /var/lib/bluetooth/&#123;计算机的蓝牙MAC&#125;/&#123;蓝牙鼠标的MAC&#125;</span><br><span class="line">$ cat info</span><br></pre></td></tr></table></figure>
 
-<div id="paginator">
-  
+<p>找到以<code>Key=</code>开头的一行，后面的便是配对密钥。将其记录下来。</p>
+<p>如果<code>/{计算机的蓝牙MAC}/</code>下有多个蓝牙设备MAC目录，可根据每个目录中info文件中的Name=开头一行判断哪个是蓝牙鼠标。</p>
+<h3 id="3-修改Windows中的配对密钥"><a href="#3-修改Windows中的配对密钥" class="headerlink" title="3.修改Windows中的配对密钥"></a>3.修改Windows中的配对密钥</h3><p>重启至Windows，Windows系统将蓝牙设备的配对密钥存放于注册表的<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\{本机的MAC}</code>，但这个路径无法直接用<code>regedit.exe</code>查看或编辑，下面有一种解决方法：</p>
+<ol>
+<li><p>通过此链接下载PsTools</p>
+</li>
+<li><p>解压后，将其中的PsExec.exe扔到<code>C://Windows//System32</code></p>
+</li>
+<li><p>在有管理员权限的Powershell中，运行注册表编辑器:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe -s -i regedit.exe</span><br></pre></td></tr></table></figure></li>
+<li><p>手动进入<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\{蓝牙鼠标的MAC}</code>，找到右侧名称与蓝牙鼠标MAC一致的项目，将其数值改成之前记录下的配对密钥。</p>
+</li>
+<li><p>开关一次飞行模式，或将蓝牙关闭再打开，便可正常与蓝牙鼠标配对。</p>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，如无意外，只要不再次按下配对按钮，蓝牙鼠标与两个操作系统的配对都不会丢失——无论重启/待机/切换系统，蓝牙鼠标都能在启动后直接使用。</p>
+
 </div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+<center><div class="cr">Copyright © 2020 By J10c</div></center>
+
+ <style>
+ .cr{
+    bottom:0;
+    line-height: 20px;
+    user-select: none;
+    font-size: 0.5rem;
+ }
+ </style>
+
         </div>
       </div>
       <div class="column col-2 hide-lg">
@@ -183,10 +232,19 @@ function sidebar_toggle() {
     <!-- Author title -->
     <div class="author-title">
       <div>J10c</div>
-      <div>2020-03-24</div>
+      <div>2020-01-16</div>
     </div>
   </div>
   
+  
+    <div class="divider"></div>
+
+    <strong><div class="link">
+      
+
+      <a class="tag-link" href="/tags/drives/" rel="tag"># drives</a>
+    </div></strong>
+    
   
 
   <div class="divider"></div>
