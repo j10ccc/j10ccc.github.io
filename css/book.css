@@ -5,10 +5,10 @@
 html {
   margin: 0;
   height: 100%;
-  font-size: 16px; }
+  font-size: 20px; }
 
 body {
-  font-size: 1rem; }
+  font-size: 0.8em; }
 
 a {
   color: #004ed0; }
@@ -72,22 +72,22 @@ img {
       padding-bottom: 0.4rem;
       border-bottom: 1px solid #e7e7e7; }
     .off-canvas-content .book-content .book-post h1 {
-      font-size: 1.75rem; }
-    .off-canvas-content .book-content .book-post h2 {
       font-size: 1.4rem; }
+    .off-canvas-content .book-content .book-post h2 {
+      font-size: 1.125rem; }
     .off-canvas-content .book-content .book-post h2:before {
       color: #004ed0;
       content: "#";
       font-weight: bold;
       font-size: 1.5rem; }
     .off-canvas-content .book-content .book-post h3 {
-      font-size: 1.25rem; }
-    .off-canvas-content .book-content .book-post h4 {
       font-size: 1rem; }
+    .off-canvas-content .book-content .book-post h4 {
+      font-size: 0.8em; }
     .off-canvas-content .book-content .book-post h5 {
-      font-size: 0.875rem; }
+      font-size: 0.7rem; }
     .off-canvas-content .book-content .book-post h6 {
-      font-size: 0.75rem;
+      font-size: 0.6rem;
       color: grey; }
     .off-canvas-content .book-content .book-post p {
       margin-bottom: 1rem; }
@@ -182,7 +182,7 @@ img {
         left: 0; }
     .off-canvas-content .book-content .book-post figcaption {
       text-align: center;
-      font-size: 0.875rem;
+      font-size: 0.7rem;
       margin: 0.5rem 0; }
     .off-canvas-content .book-content .book-post img {
       display: block;
@@ -201,7 +201,7 @@ img {
       font-family: consolas, Menlo, monospace;
       background: #f7f7f7;
       color: #4d4d4c;
-      line-height: 1.5rem;
+      line-height: 1.2rem;
       margin: 1rem auto 1rem; }
     .off-canvas-content .book-content .gutter {
       -moz-user-select: none;
@@ -223,7 +223,7 @@ img {
         padding: 0;
         text-shadow: none; }
     .off-canvas-content .book-content .highlight {
-      font-size: 0.75rem;
+      font-size: 0.6rem;
       overflow: auto; }
       .off-canvas-content .book-content .highlight *::selection {
         background: #d6d6d6; }
@@ -334,7 +334,7 @@ img {
       color: #8959a8; }
   .off-canvas-content .book-post-info {
     position: fixed;
-    font-size: 0.875rem; }
+    font-size: 0.7rem; }
     @media all and (min-width: 1280px) {
       .off-canvas-content .book-post-info {
         max-width: 10rem; } }
@@ -346,7 +346,7 @@ img {
       opacity: 1;
       max-height: 150px;
       overflow: auto;
-      font-size: 0.875rem;
+      font-size: 0.7rem;
       transition: max-height 0.15s ease-in;
       transition: opacity 0.15s ease-in; }
       .off-canvas-content .book-post-info .book-post-meta .author {
@@ -478,7 +478,7 @@ img {
     width: 12rem;
     overflow-x: hidden;
     overflow-y: auto;
-    font-size: 0.875rem; }
+    font-size: 0.7rem; }
     .book-sidebar .book-menu h1,
     .book-sidebar .book-menu h2,
     .book-sidebar .book-menu h3,
@@ -487,7 +487,7 @@ img {
     .book-sidebar .book-menu h6 {
       padding: 0 0.6rem 0 1.25rem;
       margin: 1.25rem 0 0.625rem 0;
-      font-size: 0.875rem; }
+      font-size: 0.7rem; }
     .book-sidebar .book-menu ul,
     .book-sidebar .book-menu ol,
     .book-sidebar .book-menu li {
@@ -560,13 +560,13 @@ img {
   margin: 0; }
 
 .book-archive h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem; }
 
 .book-archive h2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
   border-bottom: 1px solid #e7e7e7; }
