@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Fiddler]抓取学习平板上的作业答案 - J10c&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#984a59" />
+<meta name="msapplication-navbutton-color" content="#984a59">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
+
+
+<meta name="author" content="J10c" /><meta name="description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/hackyzy/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[Fiddler]抓取学习平板上的作业答案" />
+<meta property="og:description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/hackyzy/" />
+<meta property="article:published_time" content="2020-03-13T11:42:01+00:00" />
+<meta property="article:modified_time" content="2020-03-13T11:42:01+00:00" />
+<meta itemprop="name" content="[Fiddler]抓取学习平板上的作业答案">
+<meta itemprop="description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学">
+<meta itemprop="datePublished" content="2020-03-13T11:42:01+00:00" />
+<meta itemprop="dateModified" content="2020-03-13T11:42:01+00:00" />
+<meta itemprop="wordCount" content="1625">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Fiddler]抓取学习平板上的作业答案"/>
+<meta name="twitter:description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">J10c&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">J10c&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Fiddler]抓取学习平板上的作业答案</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-13 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#准备">准备</a></li>
+        <li><a href="#环境配置">环境配置</a></li>
+        <li><a href="#开始抓包">开始抓包</a></li>
+        <li><a href="#分析数据">分析数据</a></li>
+        <li><a href="#导出答案">导出答案</a>
+          <ul>
+            <li><a href="#使用方法">使用方法</a></li>
+          </ul>
+        </li>
+        <li><a href="#结尾">结尾</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>[NOTE] Updated <span class="timeago" datetime="2020-03-13T11:42:01" title="March 13, 2020">March 13, 2020</span>. This article may have outdated content or subject matter.</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <p><small><center>本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。</center></small></p>
+<h2 id="背景">背景</h2>
+<p><del>这一切得从一只蝙蝠说起。</del>
+学校上学期发了一个三星学习平板，装载着与 <strong>知名教育公司<a href="%5Bhttps://baike.baidu.com/item/%E5%AD%A6%E6%B5%B7%E6%95%99%E8%82%B2/5666012?fr=aladdin%5D(https://baike.baidu.com/item/%E5%AD%A6%E6%B5%B7%E6%95%99%E8%82%B2/5666012?fr=aladdin)">学海</a></strong> 深度定 (p) 制 (y) 的 <a href="https://www.zjxhedu.com/">”智通云系统“</a> ，网课作业都在这上面布置，并且还在这上面举办大型考试， <del>这让我这天天上课摸鱼的烂头怎么活？</del> 当第一次考试失利后，我突然想到可以用 Fiddler 去获取电子试卷的题目，说不定连答案也可以抓到！抱着尝试的心态，我点开了 考场APP<strong>云作业</strong> &hellip;</p>
+<h2 id="准备">准备</h2>
+<p>Fiddler 4，学习平板一台</p>
+<h2 id="环境配置">环境配置</h2>
+<ol>
+<li>
+<p>打开Fiddler，设置代理端口。
+<img src="https://s1.ax1x.com/2020/03/13/8usH54.png" alt=""></p>
+</li>
+<li>
+<p>依次点开开学习平板<code>设置-连接-WLAN-当前网络-高级设置-代理服务器-无—&gt;手动</code>
+代理主机名填运行 Fiddler 的电脑的内网IP，端口填<code>8888</code>，点击保存。
+这时候在平板上随便打开一个APP，刷新两下看看Fiddler里面有没有请求或者响应信息出现。</p>
+</li>
+</ol>
+<h2 id="开始抓包">开始抓包</h2>
+<ol>
+<li>
+<p>平板HOME 界面长按 云作业APP ，点击<strong>清除数据</strong>，清除完成后，打开云作业，同时密切关注 Fiddler 的请求列表。</p>
+</li>
+<li>
+<p>当云作业首页加载得差不多的时候，一次双击点开 Fiddler 中各个数据包，选择右侧窗口的 <code>TextView</code> 查看每个数据包的详细内容，如果发现有一个数据包的内容特别长（由滚动条可以看出）那么它就是我们要找的那个包，点击右下角的<code>View in Notepad</code>，保存这条数据信息。</p>
+<p><img src="https://s1.ax1x.com/2020/03/13/8usLG9.png" alt=""></p>
+</li>
+</ol>
+<h2 id="分析数据">分析数据</h2>
+<p>对这条数据仔细分析一下，不难发现里面有很多已经出现在云作业APP中的作业名称，而且几乎每个作业信息的格式都是一样的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json">   <span class="p">{</span>
+     <span class="nt">&#34;workId&#34;</span><span class="p">:</span> <span class="s2">&#34;${WORKID}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;studentWorkId&#34;</span><span class="p">:</span> <span class="s2">&#34;${STUDENTWORDID}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;teacherId&#34;</span><span class="p">:</span> <span class="s2">&#34;${TEACHERID}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;haveSeen&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;${NAME}&#34;</span><span class="p">,</span> <span class="err">//作业名称</span>
+     <span class="nt">&#34;postscript&#34;</span><span class="p">:</span> <span class="s2">&#34;${POSTSCRIPT}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;createTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${CREATEIME}&#34;</span><span class="p">,</span> <span class="err">//单位:ms</span>
+     <span class="nt">&#34;updateTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPDATETIME}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;uptoTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPTOTIME}&#34;</span><span class="p">,</span>
+     <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+     <span class="nt">&#34;schedule&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+     <span class="nt">&#34;period&#34;</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span>
+     <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+     <span class="nt">&#34;selfScore&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+     <span class="nt">&#34;emendNum&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&#34;contentUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;http://xhfs2.oss-cn-hangzhou.aliyuncs.com${ADRESS}.txt&#34;</span><span class="p">,</span>
+     <span class="err">//此处省略多行</span>
+     <span class="nt">&#34;inputAssociate&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+     <span class="nt">&#34;preDownloadUrls&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+     <span class="nt">&#34;publishTime&#34;</span><span class="p">:</span> <span class="mi">0</span>
+   <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>   <center><small>我抓的明明是作业的信息，可是为什么一个题目都没有显示？</small></center>
+<p>令人好奇的是，每条作业信息中<code>contentUrl</code>属性值为一个 URL ，指向的是一个 TXT 文件，我下载来一看</p>
+<p><img src="https://s1.ax1x.com/2020/03/13/8usxr6.jpg" alt=""></p>
+<p><font size="8"> <center> <strong>入眼的是满满的答案啊！</strong></center> </font></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json">   <span class="p">{</span>
+     <span class="nt">&#34;isCustomScore&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+     <span class="nt">&#34;lectureInfoList&#34;</span><span class="p">:</span> <span class="p">[],</span>
+     <span class="nt">&#34;questionAnswers&#34;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+         <span class="nt">&#34;answerContent&#34;</span><span class="p">:</span> <span class="s2">&#34;A&#34;</span><span class="p">,</span>  <span class="err">//答案</span>
+         <span class="nt">&#34;answerContentType&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="err">//此值可以为1,2,3...表示同一题的多个答案</span>
+         <span class="nt">&#34;inputType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nt">&#34;keyboardType&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;optionNum&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+         <span class="nt">&#34;orgIndex&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mi">20000</span>  <span class="err">//分数，单位</span><span class="p">:</span><span class="mi">10</span><span class="err">^</span><span class="mi">-4</span><span class="err">分</span>
+       <span class="p">}</span>
+       
+       <span class="err">//此处省略多行</span>
+     <span class="p">],</span>
+     <span class="nt">&#34;questionPoolContentInfos&#34;</span><span class="p">:</span> <span class="p">[</span>
+    	<span class="p">{</span>
+         <span class="nt">&#34;bookId&#34;</span><span class="p">:</span> <span class="s2">&#34;${BOOKID}&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;catalogId&#34;</span><span class="p">:</span> <span class="s2">&#34;${CATALOGID}&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;checkType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;deleteType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;difficulty&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;drawingUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;errorRate&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;explainContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${EXPLAINCONTENT}&#34;</span><span class="p">,</span> <span class="err">//题目答案解析</span>
+         <span class="nt">&#34;explainContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;isAllDoFlag&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nt">&#34;isEncrypt&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;isTitle&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;isWrongQuestion&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;listeningUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;lockInputType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;parentQuestionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${PARENTQUESTIONID}&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;questionLayoutType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+         <span class="nt">&#34;questionSystemType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+         <span class="nt">&#34;questionUserType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+         <span class="nt">&#34;stemContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${STEMCONTENT}&#34;</span><span class="p">,</span> <span class="err">//题面</span>
+         <span class="nt">&#34;stemContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+         <span class="nt">&#34;totalScores&#34;</span><span class="p">:</span> <span class="mi">40000</span><span class="p">,</span> 
+         <span class="nt">&#34;verifyStatus&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="nt">&#34;workRollVersion&#34;</span><span class="p">:</span> <span class="mi">0</span>
+       <span class="p">}</span>
+       <span class="err">//省略多行</span>
+      <span class="p">]</span>
+   <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不仅有答案，还有题目和题目解析，看来这个月的作业和考试都不愁了，<font size="6">哈哈哈哈哈</font></p>
+<h2 id="导出答案">导出答案</h2>
+<p>我写了一个 Python3 脚本 :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="s1">&#39;&#39;&#39;
+</span><span class="s1">    运行环境：
+</span><span class="s1">    Linux Ubuntu18.04 WSL，需要安装wget
+</span><span class="s1">    代码有BUG，多选题答案的各个答案会被当做多道单选题的答案
+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">glob</span>
+
+<span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">subjectlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;语文&#39;</span><span class="p">,</span><span class="s1">&#39;数学&#39;</span><span class="p">,</span><span class="s1">&#39;英语&#39;</span><span class="p">,</span><span class="s1">&#39;物理&#39;</span><span class="p">,</span><span class="s1">&#39;政治&#39;</span><span class="p">,</span><span class="s1">&#39;技术&#39;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&#34;[ANS] &#34;</span> <span class="o">+</span> <span class="n">fn</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;w&#34;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Finished creating ANSWER!&#34;</span><span class="p">)</span>
+	
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;r&#34;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">eachline</span> <span class="ow">in</span> <span class="nb">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">22</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;      &#34;answerContent&#34;:&#39;</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">mystr</span> <span class="o">=</span> <span class="n">eachline</span><span class="p">[</span><span class="mi">23</span><span class="p">:]</span>
+            <span class="c1">#mylist = eachline.split(&#39;:&#39;)</span>
+            <span class="s1">&#39;&#39;&#39;			
+</span><span class="s1">            if &#34;image/png;base64,&#34;  in mystr:
+</span><span class="s1">            		mystr = &#34;data:&#34; + mystr
+</span><span class="s1">            &#39;&#39;&#39;</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">:</span>
+                <span class="n">everyans</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">everyans</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
+
+            <span class="k">global</span> <span class="n">ans</span>
+            <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">everyans</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">31</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;  &#34;questionPoolContentInfos&#34;: [&#39;</span><span class="p">:</span>
+            <span class="n">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+            <span class="k">break</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">dataurl</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input downloadURL: &#34;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;wget &#34;</span> <span class="o">+</span> <span class="n">dataurl</span><span class="p">)</span>
+    <span class="n">list1</span> <span class="o">=</span> <span class="n">dataurl</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">fn</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;1.语文 2.数学 3.英语 4.物理 5.政治 6.技术&#34;</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">subject</span>
+    <span class="n">subject</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input subjectnum: &#34;</span><span class="p">))</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="s2">&#34;[&#34;</span> <span class="o">+</span> <span class="n">subjectlist</span><span class="p">[</span><span class="n">subject</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;] &#34;</span><span class="o">+</span> <span class="n">fn</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;...&#34;</span> <span class="o">+</span> <span class="n">fn</span><span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">:]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;---------&#34;</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">+</span> <span class="s2">&#34;---------&#34;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span><span class="n">fn</span><span class="p">)</span>
+    <span class="n">process</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><center><small>此脚本会下载答案文件，并自动提取答案</small></small></center>
+<h3 id="使用方法">使用方法</h3>
+<ol>
+<li>
+<p>输入答案下载链接（形如<code>http://xhfs2.oss-cn-hangzhou.aliyuncs.com/${ADRESS}.txt</code>）</p>
+</li>
+<li>
+<p>下载完毕后，输入答案相应的学科编号，答案即刻生成。</p>
+<p><img src="https://s1.ax1x.com/2020/03/13/8usO2R.png" alt=""></p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ ls
+<span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>  <span class="s1">&#39;[政治] 1234...abcd.txt&#39;</span>
+<span class="c1"># [政治] 1234...abcd.txt 是答案源文件</span>
+<span class="c1"># [ANS] [政治] 1234...abcd.txt 是自动生成的答案</span>
+$ cat <span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>
+01.  <span class="s2">&#34;A&#34;</span>,
+02.  <span class="s2">&#34;D&#34;</span>,
+03.  <span class="s2">&#34;D&#34;</span>,
+04.  <span class="s2">&#34;A&#34;</span>,
+05.  <span class="s2">&#34;D&#34;</span>,
+06.  <span class="s2">&#34;D&#34;</span>,
+07.  <span class="s2">&#34;B&#34;</span>,
+08.  <span class="s2">&#34;D&#34;</span>,
+<span class="c1">### 省略若干行，不止能生成选择题！</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="结尾">结尾</h2>
+<p>我得赶紧写作业去了。<del>毕竟开学考是逃不过的。。</del></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/bookthemecss/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">新主题开坑（长期更新）</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/font-win-cmd/">
+            <span class="next-text nav-default">对Windows终端的新宋体说拜拜</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright" style="display: inline-block;padding-left: 5%;">
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    <span>Copyright</span>
+    <span>
+      &copy; 
+      2019 - 
+      2021</span>
+    
+    
+    <span>By</span>
+    <span>J10c</span>
+  </span>
+</div>
+
+
+
+<div class="social-links" style="display: inline-block;padding-right: 5%;float: right;">
+      <a href="blyb1739@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

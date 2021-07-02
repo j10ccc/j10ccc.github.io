@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>不是所有的笔记本都用git同步 - J10c&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#984a59" />
+<meta name="msapplication-navbutton-color" content="#984a59">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
+
+
+<meta name="author" content="J10c" /><meta name="description" content="背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/gitnotebook/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="不是所有的笔记本都用git同步" />
+<meta property="og:description" content="背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/gitnotebook/" />
+<meta property="article:published_time" content="2020-07-28T14:16:08+00:00" />
+<meta property="article:modified_time" content="2020-07-28T14:16:08+00:00" />
+<meta itemprop="name" content="不是所有的笔记本都用git同步">
+<meta itemprop="description" content="背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期">
+<meta itemprop="datePublished" content="2020-07-28T14:16:08+00:00" />
+<meta itemprop="dateModified" content="2020-07-28T14:16:08+00:00" />
+<meta itemprop="wordCount" content="917">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="不是所有的笔记本都用git同步"/>
+<meta name="twitter:description" content="背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">J10c&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">J10c&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">不是所有的笔记本都用git同步</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-28 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#配置流程">配置流程</a></li>
+        <li><a href="#主要界面">主要界面</a>
+          <ul>
+            <li><a href="#首页展示样式">首页展示样式</a></li>
+            <li><a href="#设置界面">设置界面</a></li>
+            <li><a href="#文本编辑">文本编辑</a></li>
+          </ul>
+        </li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>[NOTE] Updated <span class="timeago" datetime="2020-07-28T14:16:08" title="July 28, 2020">July 28, 2020</span>. This article may have outdated content or subject matter.</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="背景">背景</h2>
+<p>最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调<strong>永不丢失</strong>，能<strong>多端同步</strong>，但是它的 Markdown 渲染功能要付费（在<a href="https://sspai.fireside.fm/ep12">一期播客</a>中听说他的渲染引擎是自制的，并非基于Webview ，可能更省电些 <del>稍微记点东西感知不大</del>），身为 Markdown 中毒用户，这我怎么能忍，马上去 Play Store 上搜md编辑器，结果找到了个炒鸡好用的，<strong>有 git 支持</strong>的编辑器——<a href="https;//gitjournal.io"><strong>GitJournal</strong></a>。</p>
+<p>git 同步有多方便多安全就不用我多说了，同步的私人仓库是自己的，多端跨系统同步不需要任何软件，有个能上网的浏览器就行。于是我马上打开APP，绑定了git。</p>
+<p>考虑到 git 同步的稳定性，我选择了 码云gitee ，国内仓库比起 github 的玄学提交速度好多了（提交时间一般由笔记数量决定）</p>
+<h2 id="配置流程">配置流程</h2>
+<ol>
+<li>Select a Git Hosting Provider —— Custom</li>
+<li>去<a href="https://gitee.com/">码云</a>创建一个新私有仓库</li>
+<li>输入 Git Clone URL</li>
+<li>匹配公钥</li>
+</ol>
+<p>值得注意的是码云匹配公钥时有点不同： 有添加个人公钥选项。</p>
+<p><img src="https://s1.ax1x.com/2020/07/22/Ub55h8.png" alt="👆标题乱输，公钥复制粘贴APP内随机生成的"></p>
+<h2 id="主要界面">主要界面</h2>
+<h3 id="首页展示样式">首页展示样式</h3>
+<p><img src="https://s1.ax1x.com/2020/07/27/aFxTIS.jpg" alt=""></p>
+<h3 id="设置界面">设置界面</h3>
+<p><img src="https://s1.ax1x.com/2020/07/22/UbI9c4.jpg" alt=""></p>
+<p>主要功能有：（部分功能要付费解锁，但几乎都是鸡肋）</p>
+<ul>
+<li>可选昼/夜模式</li>
+<li>设置默认文件夹 笔记文件保存在<code>/data/user/0/io.gitjournal.gitjournal/app_flutter/journal/ </code></li>
+<li>提交 git 账户信息</li>
+<li>设置默认打开的编辑界面</li>
+<li>文件储存设置</li>
+<li>调试信息（只保留当天的，同步失败这里找原因）</li>
+</ul>
+<h3 id="文本编辑">文本编辑</h3>
+<ul>
+<li>编辑器模式</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/22/UbICjJ.jpg" alt=""></p>
+<ul>
+<li>渲染效果</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/27/akpgGF.jpg" alt=""></p>
+<p>关闭黑夜模式是因为 To Do 在黑夜模式下前面的选项框看不清楚（背景灰色，框黑色）</p>
+<h2 id="总结">总结</h2>
+<ol>
+<li>
+<p>编辑体验一般，偶尔做些笔记可以，但写文章不太行，markdown 要打大量的符号，无快捷添加方式，只能一个个从键盘里面选，效率低下，且无 highlight ，标题加粗斜体等行不够醒目。</p>
+</li>
+<li>
+<p>To Do 编辑体验良好，跟其他编辑器不相上下，写 To Do 记得把编辑器模式拨对（Checklist Editor）。</p>
+</li>
+<li>
+<p>渲染效果一般，该有的都有了。</p>
+</li>
+<li>
+<p>界面清晰明了，无过多花哨功能，并且有 markdown 加持，保证专注程度。</p>
+</li>
+<li>
+<p>git 同步点赞👍，省时省力（可结合 GitLab 同步到自己服务器中），且出错时能分析调试信息，保证同步有效性。</p>
+</li>
+<li>
+<p>部分功能解锁价格偏高（月季制度），付费功能偏弱（Play Store 评论区下，作者挺关心收费价格这点的，可以去还价）。</p>
+</li>
+</ol>
+<p>总体来说可以，日常够用，同类app中应该是最优选项了。<del>哎？Play Store中好像没有同类app&hellip;</del></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/xuehaitablet-reborn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">毕业之后关于学海平板的处置</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/bookthemecss/">
+            <span class="next-text nav-default">新主题开坑（长期更新）</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright" style="display: inline-block;padding-left: 5%;">
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    <span>Copyright</span>
+    <span>
+      &copy; 
+      2019 - 
+      2021</span>
+    
+    
+    <span>By</span>
+    <span>J10c</span>
+  </span>
+</div>
+
+
+
+<div class="social-links" style="display: inline-block;padding-right: 5%;float: right;">
+      <a href="blyb1739@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

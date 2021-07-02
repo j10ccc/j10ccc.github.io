@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Windows和Linux共享蓝牙鼠标 - J10c&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#984a59" />
+<meta name="msapplication-navbutton-color" content="#984a59">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
+
+
+<meta name="author" content="J10c" /><meta name="description" content="前言 当一台电脑同时安装了Windows&amp;amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/mouse-share/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Windows和Linux共享蓝牙鼠标" />
+<meta property="og:description" content="前言 当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/mouse-share/" />
+<meta property="article:published_time" content="2020-01-16T20:30:04+00:00" />
+<meta property="article:modified_time" content="2020-01-16T20:30:04+00:00" />
+<meta itemprop="name" content="Windows和Linux共享蓝牙鼠标">
+<meta itemprop="description" content="前言 当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便">
+<meta itemprop="datePublished" content="2020-01-16T20:30:04+00:00" />
+<meta itemprop="dateModified" content="2020-01-16T20:30:04+00:00" />
+<meta itemprop="wordCount" content="1172">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows和Linux共享蓝牙鼠标"/>
+<meta name="twitter:description" content="前言 当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">J10c&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">J10c&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Windows和Linux共享蓝牙鼠标</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-16 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#流程">流程</a>
+          <ul>
+            <li><a href="#1-在linux中配对">1. 在Linux中配对</a></li>
+            <li><a href="#2获取linux中的配对密钥">2.获取Linux中的配对密钥</a></li>
+            <li><a href="#3修改windows中的配对密钥">3.修改Windows中的配对密钥</a></li>
+          </ul>
+        </li>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>[NOTE] Updated <span class="timeago" datetime="2020-01-16T20:30:04" title="January 16, 2020">January 16, 2020</span>. This article may have outdated content or subject matter.</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<p>当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便需重新配对，十分不方便。</p>
+<p>这是因为蓝牙设备有一个配对密钥，计算机必须有这个密钥，才能与蓝牙鼠标配对。而两个操作系统上保存的配对密钥不同，因此每次切换系统都需要重新配对。</p>
+<p>我们要做的便是设法令两个操作系统对蓝牙鼠标存有相同的配对密钥。</p>
+<h2 id="流程">流程</h2>
+<ol>
+<li>在Linux中删除已配对的蓝牙鼠标并找到获取连接密钥</li>
+<li>在Windows中修改原密钥并配对蓝牙鼠标</li>
+<li>重启至Linux</li>
+</ol>
+<h3 id="1-在linux中配对">1. 在Linux中配对</h3>
+<p>这一步前提是在Windows下，蓝牙鼠标可以正常使用。</p>
+<p>重启至Linux，在系统设置中连接蓝牙鼠标<code>设置-- 蓝牙--开启--扫描设备--连接</code></p>
+<p>完成后，蓝牙鼠标在Linux系统中应该可以正常使用了。无论重启/待机，配对都不会丢失——除非再次按下了配对按钮。</p>
+<h3 id="2获取linux中的配对密钥">2.获取Linux中的配对密钥</h3>
+<p>Linux将蓝牙设备的配对信息存放在  <code>/var/lib/bluetooth/{计算机的蓝牙MAC}/{蓝牙设备的MAC}/info</code>中，需切换到root用户访问<code>/var/lib/bluetooth</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ su <span class="c1">#切换到root用户，如果你是第一次使用root账户，那首先要重设置root用户的密码</span>
+$ <span class="nb">cd</span> /var/lib/bluetooth/<span class="o">{</span>计算机的蓝牙MAC<span class="o">}</span>/<span class="o">{</span>蓝牙鼠标的MAC<span class="o">}</span>
+$ cat info
+</code></pre></td></tr></table>
+</div>
+</div><p>找到以<code>Key=</code>开头的一行，后面的便是配对密钥。将其记录下来。</p>
+<p>如果<code>/{计算机的蓝牙MAC}/</code>下有多个蓝牙设备MAC目录，可根据每个目录中info文件中的Name=开头一行判断哪个是蓝牙鼠标。</p>
+<h3 id="3修改windows中的配对密钥">3.修改Windows中的配对密钥</h3>
+<p>重启至Windows，Windows系统将蓝牙设备的配对密钥存放于注册表的<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\{本机的MAC}</code>，但这个路径无法直接用<code>regedit.exe</code>查看或编辑，下面有一种解决方法：</p>
+<ol>
+<li>
+<p>通过此链接下载PsTools</p>
+</li>
+<li>
+<p>解压后，将其中的PsExec.exe扔到<code>C://Windows//System32</code></p>
+</li>
+<li>
+<p>在有管理员权限的Powershell中，运行注册表编辑器:</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">PsExec.exe -s -i regedit.exe
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>手动进入<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys\{蓝牙鼠标的MAC}</code>，找到右侧名称与蓝牙鼠标MAC一致的项目，将其数值改成之前记录下的配对密钥。</li>
+<li>开关一次飞行模式，或将蓝牙关闭再打开，便可正常与蓝牙鼠标配对。</li>
+</ol>
+<h2 id="结语">结语</h2>
+<p>至此，如无意外，只要不再次按下配对按钮，蓝牙鼠标与两个操作系统的配对都不会丢失——无论重启/待机/切换系统，蓝牙鼠标都能在启动后直接使用。</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/nap-proxy/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">用NAP访问无公网IP的树莓派</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright" style="display: inline-block;padding-left: 5%;">
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    <span>Copyright</span>
+    <span>
+      &copy; 
+      2019 - 
+      2021</span>
+    
+    
+    <span>By</span>
+    <span>J10c</span>
+  </span>
+</div>
+
+
+
+<div class="social-links" style="display: inline-block;padding-right: 5%;float: right;">
+      <a href="blyb1739@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

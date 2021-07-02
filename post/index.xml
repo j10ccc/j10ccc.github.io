@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on J10c&#39;s Blog</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on J10c&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Jun 2021 20:10:25 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>毕业之后关于学海平板的处置</title>
+      <link>http://localhost:1313/post/xuehaitablet-reborn/</link>
+      <pubDate>Mon, 21 Jun 2021 20:10:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/xuehaitablet-reborn/</guid>
+      <description>高中毕业学海终于给平板解 MDM 了，备份好以前的课件和照片后，马上准备双清然后 root （这Android9 动画bug太多了。。 Q：为什么要 ROOT ？ A：这 3G RAM</description>
+    </item>
+    
+    <item>
+      <title>不是所有的笔记本都用git同步</title>
+      <link>http://localhost:1313/post/gitnotebook/</link>
+      <pubDate>Tue, 28 Jul 2020 14:16:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/gitnotebook/</guid>
+      <description>背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期</description>
+    </item>
+    
+    <item>
+      <title>新主题开坑（长期更新）</title>
+      <link>http://localhost:1313/post/bookthemecss/</link>
+      <pubDate>Mon, 30 Mar 2020 14:16:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/bookthemecss/</guid>
+      <description>Book 这个 hexo-theme 很开放，也很简陋，Home 要自己写，文章列表也要自己引入，相比于我之前用过的主题完全是两个东西。看了 Hexo 官方文档，感觉应该可以用 js 脚本</description>
+    </item>
+    
+    <item>
+      <title>[Fiddler]抓取学习平板上的作业答案</title>
+      <link>http://localhost:1313/post/hackyzy/</link>
+      <pubDate>Fri, 13 Mar 2020 11:42:01 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hackyzy/</guid>
+      <description>本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学</description>
+    </item>
+    
+    <item>
+      <title>对Windows终端的新宋体说拜拜</title>
+      <link>http://localhost:1313/post/font-win-cmd/</link>
+      <pubDate>Sun, 16 Feb 2020 19:51:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/font-win-cmd/</guid>
+      <description>背景 这几天因为疫情，学校在网上开课，但我又刚买了2只舵机，得在树莓派上先搭建好环境，于是就一边上课一边搭建，因为网课限制Windows平台，</description>
+    </item>
+    
+    <item>
+      <title>用NAP访问无公网IP的树莓派</title>
+      <link>http://localhost:1313/post/nap-proxy/</link>
+      <pubDate>Mon, 03 Feb 2020 20:07:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nap-proxy/</guid>
+      <description>你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS</description>
+    </item>
+    
+    <item>
+      <title>Windows和Linux共享蓝牙鼠标</title>
+      <link>http://localhost:1313/post/mouse-share/</link>
+      <pubDate>Thu, 16 Jan 2020 20:30:04 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/mouse-share/</guid>
+      <description>前言 当一台电脑同时安装了Windows&amp;amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便</description>
+    </item>
+    
+  </channel>
+</rss>
