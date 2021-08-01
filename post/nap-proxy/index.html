@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
 
 
-<meta name="author" content="J10c" /><meta name="description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="J10c" /><meta name="description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.80.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/nap-proxy/" />
+<link rel="canonical" href="http://j10ccc.github.io/post/nap-proxy/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,7 +42,7 @@
 <meta property="og:title" content="用NAP访问无公网IP的树莓派" />
 <meta property="og:description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/nap-proxy/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/nap-proxy/" />
 <meta property="article:published_time" content="2020-02-03T20:07:32+00:00" />
 <meta property="article:modified_time" content="2020-02-03T20:07:32+00:00" />
 <meta itemprop="name" content="用NAP访问无公网IP的树莓派">
@@ -161,11 +161,6 @@
 </nav>
   </div>
 </div>
-  <div class="post-outdated">
-    <div class="warn">
-      <p>[NOTE] Updated <span class="timeago" datetime="2020-02-03T20:07:32" title="February 3, 2020">February 3, 2020</span>. This article may have outdated content or subject matter.</p>
-    </div>
-  </div>
     <div class="post-content">
       <p>你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS大材小用而烦恼？本文提供了一种解决方案——使用较为经济的<strong>nap</strong>。</p>
 <h2 id="准备">准备</h2>
@@ -337,7 +332,7 @@ nohup ./nap <span class="p">&amp;</span> <span class="c1">#使用nohup命令，�
       <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
       <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://j10ccc.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 
@@ -352,17 +347,18 @@ nohup ./nap <span class="p">&amp;</span> <span class="c1">#使用nohup命令，�
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
-    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
-    timeago().render(document.querySelectorAll('.timeago'), languageCode);
-    timeago.cancel();  
-  </script>
 
 
 
 <script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 
