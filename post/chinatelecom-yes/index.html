@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ZJUT-PC端闪讯与内网共存 - J10c&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#984a59" />
+<meta name="msapplication-navbutton-color" content="#984a59">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
+
+
+<meta name="author" content="J10c" /><meta name="description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://j10ccc.github.io/post/chinatelecom-yes/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ZJUT-PC端闪讯与内网共存" />
+<meta property="og:description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://j10ccc.github.io/post/chinatelecom-yes/" />
+<meta property="article:published_time" content="2021-09-11T10:54:26+08:00" />
+<meta property="article:modified_time" content="2021-09-11T10:54:26+08:00" />
+<meta itemprop="name" content="ZJUT-PC端闪讯与内网共存">
+<meta itemprop="description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一">
+<meta itemprop="datePublished" content="2021-09-11T10:54:26+08:00" />
+<meta itemprop="dateModified" content="2021-09-11T10:54:26+08:00" />
+<meta itemprop="wordCount" content="2076">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ZJUT-PC端闪讯与内网共存"/>
+<meta name="twitter:description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">J10c&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">J10c&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ZJUT-PC端闪讯与内网共存</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-11 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#约定">约定</a></li>
+        <li><a href="#单独访问内网">单独访问内网</a></li>
+        <li><a href="#同时访问内外网">同时访问内外网</a>
+          <ul>
+            <li><a href="#原理">原理</a></li>
+            <li><a href="#具体实现">具体实现</a></li>
+          </ul>
+        </li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="背景">背景</h2>
+<p>看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？</p>
+<p>跨专业学习了一下，终于搓出了这份教程💦💦💦</p>
+<h2 id="约定">约定</h2>
+<ol>
+<li>你的电脑应该至少有两张网卡，一张有线，一张无线（说人话就是能既插网线又能连WIFI，拓展坞实现插网线的也可以，一般的笔记本都能满足要求）</li>
+<li>本教程适用于Windows系统，在 Windows10 21H1 和 20H2版本上已经成功，MacOS 也能实现，把 Powershell 的命令转译成 bash 就行了，当然欢迎 Linux 用户来捧场，会手动拨号了改个路由表应该不在话下。</li>
+<li>对于已经使用了 OpenWrt 通过 WIFI 访问外网的电信用户，在客户端上你需要<strong>两张</strong>无线网卡，也可以在路由器上按教程中的原理配置。</li>
+<li>嫌麻烦的看完<strong>单独访问内网</strong>就可以结束了，以后用内网先要断闪讯，插移动专用网口，或者连 <strong>Wlan-edu</strong>。</li>
+<li>有什么问题邮箱（网页底部）找我，看到了就回。</li>
+</ol>
+<h2 id="单独访问内网">单独访问内网</h2>
+<p>先从寝室里单独使用内网说起吧，好多人~~（助班）~~都不知道电信用户能在寝室访问内网，电脑有两种方式，手机有一种：</p>
+<ol>
+<li>
+<p>电脑断开所有网络的有线连接（闪讯）和无线连接，WIFI 连接 <strong>Wlan-edu</strong>，随便访问一个内网 IP（如<code>192.168.1.1</code>），会出现登录页面，输入账号密码，选择校园网，登录成功即可。<del>这样子网速稍微慢一点</del></p>
+</li>
+<li>
+<p>电脑插墙壁上比较新的网口（就是移动用户上网插的网口），随便访问一个内网 IP（如<code>192.168.1.1</code>），会跳转到登录页面，登录成功即可。<del>这样访问内网最快的！</del></p>
+</li>
+<li>
+<p>手机不需要关闭流量开关，WIFI 连接 <strong>Wlan-edu</strong>，随便访问一个内网 IP（如<code>192.168.1.1</code>），会出现登录页面，登录成功即可。</p>
+<blockquote>
+<p>第一次登录校园网，账号是学号，密码是身份证后8位，登录成功会提示去自助服务平台开通，在Dr.com那个页面输入同样的账号密码，成功登录后会发现账号状态默认停机，右侧业务办理处点击“用户注册开通”链接，弹出什么责任书，同意然后输入短信验证码，就登录成功了，接下来弹出一个页面，里面有两个选项，不用管他，回到Dr.com这个页面，刷新一下，看到账户状态是在线的就行了，然后就能访问内网了</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="同时访问内外网">同时访问内外网</h2>
+<p>在此之前，你应该已经自助服务开通了校园网账号，并且你的<strong>Windows电脑</strong>应该能<strong>单独访问内网</strong>。</p>
+<p>同时使用内网和外网（闪讯），考虑到成本，对于大多数笔记本，理想的连接方式就是内网用 WIFI，外网用闪讯，上面提到了，这样访问内网可能会比较慢（如果有两个有线网卡是最好的）</p>
+<p>先插线连接闪讯，再连接名为 <strong>Wlan-edu</strong> 的WIFI，<strong>管理员身份</strong>打开 <strong>Powershell</strong>，输入 <code>ipconfig</code>，找到<strong>无线局域网适配器 WLAN</strong>的默认网关（如果默认网关为空，那就再等一下），也就是校园网的网关，记为<code>${网关IP}</code></p>
+<p>再输入<code>route print</code>，打开<strong>路由表</strong>，应该会看到类似以下的字样（顺序乱了没事）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">IPv4 路由表
+===========================================================================
+活动路由:
+网络目标           网络掩码               网关               接口         跃点数
+0.0.0.0           0.0.0.0            在链路上     115.200.94.163            36
+0.0.0.0           0.0.0.0         172.28.0.1        172.28.94.29          4261
+0.0.0.0           0.0.0.0           ${网关IP}       10.128.186.8           4556
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="原理">原理</h3>
+<p>解释一下三个解析<code>0.0.0.0</code>的路由，接口<code>115</code>开头的是 NetKeeper 拨号的路由，<code>172</code>开头的是有线网卡的路由，他们两个负责解析<strong>内外网 IP</strong>。下面以<code>10</code>开头的是无线网卡的路由， 也负责解析内外网IP，因为跃点数越低的路由优先级越高，所以我们输入内网网址<code>192.168.210.112</code>时，负责解析的网关是 NetKeeper 的网关，那当然解析不到内网主机，下面将内网路由添加到<strong>永久路由</strong>（也叫静态路由，跃点数为 1，优先级最高），为了防止内网网口解析外网 IP，所以我们指定解析特定的 IP段。</p>
+<h3 id="具体实现">具体实现</h3>
+<p>输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">delete</span> <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">0</span> <span class="n">10</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">2</span>
+<span class="c">#三个网关冲突了，所以选择删除内网路由</span>
+<span class="c">#注意中间空格</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>下面添加确定的 IP，专门使用内网连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">210</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+<span class="c"># ${ip} 为网关 IP，请根据实际修改</span>
+<span class="c"># -p 是添加到永久路由的参数，拉高优先级，同时防止电脑重启后需要手动重新配置</span>
+<span class="c">#内网登录的 IP 为 192.168.210.112，以 192.168.210.0 为网络号有效避免与电脑上其他内网服务擦枪走火</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>当然还要添加<code>172</code>开头的内网 IP，因为选课的 IP 为<code>172.16.19.163</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">172</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+<span class="c">#这边没有考虑其他网卡需要访问172开头的IP，我寻思也用不到啊，如果需要，按照上面的步骤修改命令</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上面添加的路由都会在<strong>路由表</strong>里面显示，如果觉得需要再次修改（删除再添加），请执行以下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">delete</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+<span class="c">#删除路由时三个参数要跟路由表里面的其中一条路由对应上，不然命令会执行失败</span>
+<span class="c">#含-p 是删除永久路由，如果要删除活动路由，则不需要加 -p</span>
+<span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span> <span class="c">#添加你想要的路由</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后去访问一下内网登录网页<code>192.168.210.112</code>，应该是能访问了。</p>
+<p>以上只添加了<code>192.168.210</code>和<code>172.0.0.0</code>两个网络号，如果以后有内网的 IP 属于其他的网络号的话，手动添加到路由表里面</p>
+<p>如果以后网关 IP 改变了，也需要修改路由表，。</p>
+<h2 id="总结">总结</h2>
+<p>电信在操作便捷性（定期换密码，手动设置内网）这块确实干不过移动😅，<del>移动跟学校有py</del>，但是其他方面是碾压的（延迟和实际网速）</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/to-seniors/">
+            <span class="next-text nav-default">致22届某个高三班级</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright" style="display: inline-block;padding-left: 5%;">
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    <span>Copyright</span>
+    <span>
+      &copy; 
+      2019 - 
+      2021</span>
+    
+    
+    <span>By</span>
+    <span>J10c</span>
+  </span>
+</div>
+
+
+
+<div class="social-links" style="display: inline-block;padding-right: 5%;float: right;">
+      <a href="blyb1739@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://j10ccc.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
