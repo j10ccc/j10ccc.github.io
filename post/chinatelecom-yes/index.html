@@ -49,7 +49,7 @@
 <meta itemprop="description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一">
 <meta itemprop="datePublished" content="2021-09-11T10:54:26+08:00" />
 <meta itemprop="dateModified" content="2021-09-11T10:54:26+08:00" />
-<meta itemprop="wordCount" content="2079">
+<meta itemprop="wordCount" content="2460">
 
 
 
@@ -185,7 +185,10 @@
 <li>
 <p>手机不需要关闭流量开关，WIFI 连接 <strong>Wlan-edu</strong>，随便访问一个内网 IP（如<code>192.168.1.1</code>），会出现登录页面，登录成功即可。</p>
 <blockquote>
-<p>第一次登录校园网，账号是学号，密码是身份证后8位，登录成功会提示去自助服务平台开通，在Dr.com那个页面输入同样的账号密码，成功登录后会发现账号状态默认停机，右侧业务办理处点击“用户注册开通”链接，弹出什么责任书，同意然后输入短信验证码，就登录成功了，接下来弹出一个页面，里面有两个选项，不用管他，回到Dr.com这个页面，刷新一下，看到账户状态是在线的就行了，然后就能访问内网了</p>
+<p>第一次登录宿舍楼（梦溪）校园网<code>Wlan-edu</code>，账号是学号，密码是身份证后8位，登录成功会提示去自助服务平台开通，在 Dr.COM 那个页面输入同样的账号密码，成功登录后会发现账号状态默认停机，右侧业务办理处点击“用户注册开通”链接，弹出什么责任书，同意然后输入短信验证码，就登录成功了，接下来弹出一个页面，里面有两个选项，不用管他，回到Dr.com这个页面，刷新一下，看到账户状态是在线的就行了，然后就能访问内网了。 <strong>图文可见 <a href="https://mp.weixin.qq.com/s/DIup5mkQXN5GCoYkn5ef6w">小和山校园网 9 月 11 日发表的文章</a></strong></p>
+</blockquote>
+<blockquote>
+<p>第一次登录教学区校园网<code>Zjut-stu</code>，账号是学号，密码是身份证后8位，登录成功会提示去自助服务平台开通，此时的办理页面不再是 Dr.COM 了，点击办理，出现“已处理”提示，但只停留在<strong>步骤一</strong>，无法继续执行。正确的方式应是去<strong>工大企业号（微门户）办事大厅</strong>申请 <strong>“学生校园网账号办理”</strong> ，此时你的手机应该只打开了流量开关，而 WIFI 没有连接<code>Zjut-stu</code>,一样地，一路选择下一步，最后会弹出一个无法加载的页面（显示域名为<code>172</code>开头的网页无法加载），此时<strong>断开流量开关</strong>，WIFI 连接<code>Zjut-stu</code>，微信右上角<strong>刷新页面</strong>，即可加载成功。接下来右侧业务办理处点击“用户注册开通”链接，弹出什么责任书，同意然后输入短信验证码，就开通成功了。最后再重新连接<code>Zjut-stu</code>，手机自带登录页面重新登录一次即可。</p>
 </blockquote>
 </li>
 </ol>
@@ -211,7 +214,7 @@
 网络目标           网络掩码               网关               接口         跃点数
 0.0.0.0           0.0.0.0            在链路上     115.200.94.163            36
 0.0.0.0           0.0.0.0         172.28.0.1        172.28.94.29          4261
-0.0.0.0           0.0.0.0           ${网关IP}       10.128.186.8           4556
+0.0.0.0           0.0.0.0           ${网关IP}         ${对应接口}          4556
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="原理">原理</h3>
@@ -225,7 +228,7 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">delete</span> <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">0</span> <span class="n">10</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">2</span>
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">delete</span> <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">对应接口</span><span class="p">}</span>
 <span class="c">#三个网关冲突了，所以选择删除内网路由</span>
 <span class="c">#注意中间空格</span>
 </code></pre></td></tr></table>
@@ -273,7 +276,7 @@
 </div>
 </div><p>然后去访问一下内网登录网页<code>192.168.210.112</code>，应该是能访问了。</p>
 <p>以上只添加了<code>192.168.210</code>和<code>172.0.0.0</code>两个网络号，如果以后有内网的 IP 属于其他的网络号的话，手动添加到路由表里面</p>
-<p>如果以后网关 IP 改变了，也需要修改路由表，应该是不会改的。</p>
+<p>如果以后网关 IP 改变了，也需要修改路由表，不过网关应该是不会改的。</p>
 <h2 id="总结">总结</h2>
 <p>电信在操作便捷性（定期换密码，手动设置内网）这块确实干不过移动😅，<del>移动跟学校有py</del>，但是其他方面是碾压的（延迟和实际网速）</p>
 
