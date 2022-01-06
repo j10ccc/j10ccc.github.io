@@ -6,7 +6,20 @@
     <description>Recent content in Posts on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Sep 2021 10:54:26 +0800</lastBuildDate><atom:link href="http://j10ccc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jan 2022 10:51:56 +0800</lastBuildDate>
+    
+	<atom:link href="http://j10ccc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>蚂蚁技术体验部大作业总结</title>
+      <link>http://j10ccc.github.io/post/ant-chatroom/</link>
+      <pubDate>Thu, 06 Jan 2022 10:51:56 +0800</pubDate>
+      
+      <guid>http://j10ccc.github.io/post/ant-chatroom/</guid>
+      <description>背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差</description>
+    </item>
+    
     <item>
       <title>ZJUT-PC端闪讯与内网共存</title>
       <link>http://j10ccc.github.io/post/chinatelecom-yes/</link>

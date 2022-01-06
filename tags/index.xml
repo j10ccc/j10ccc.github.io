@@ -5,6 +5,10 @@
     <link>http://j10ccc.github.io/tags/</link>
     <description>Recent content in Tags on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://j10ccc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    
+	<atom:link href="http://j10ccc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

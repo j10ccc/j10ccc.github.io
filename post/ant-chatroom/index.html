@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>蚂蚁技术体验部大作业总结 - J10c&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#984a59" />
+<meta name="msapplication-navbutton-color" content="#984a59">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
+
+
+<meta name="author" content="J10c" /><meta name="description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="http://j10ccc.github.io/post/ant-chatroom/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="蚂蚁技术体验部大作业总结" />
+<meta property="og:description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://j10ccc.github.io/post/ant-chatroom/" />
+<meta property="article:published_time" content="2022-01-06T10:51:56+08:00" />
+<meta property="article:modified_time" content="2022-01-06T10:51:56+08:00" />
+<meta itemprop="name" content="蚂蚁技术体验部大作业总结">
+<meta itemprop="description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差">
+<meta itemprop="datePublished" content="2022-01-06T10:51:56&#43;08:00" />
+<meta itemprop="dateModified" content="2022-01-06T10:51:56&#43;08:00" />
+<meta itemprop="wordCount" content="2144">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="蚂蚁技术体验部大作业总结"/>
+<meta name="twitter:description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">J10c&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">J10c&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">蚂蚁技术体验部大作业总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-06 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#技术栈">技术栈</a></li>
+        <li><a href="#koa">koa</a>
+          <ul>
+            <li><a href="#注意">注意</a></li>
+            <li><a href="#引入">引入</a></li>
+            <li><a href="#模板">模板</a></li>
+          </ul>
+        </li>
+        <li><a href="#socketio">socket.io</a>
+          <ul>
+            <li><a href="#注意-1">注意</a></li>
+            <li><a href="#服务端">服务端</a></li>
+            <li><a href="#客户端">客户端</a></li>
+          </ul>
+        </li>
+        <li><a href="#前端代码的一些tips">前端代码的一些tips</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="背景">背景</h2>
+<ul>
+<li>
+<p>这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~</p>
+</li>
+<li>
+<p>期末还差两门考试在一个星期后，突然想起来博客好像好久没有更新了。</p>
+</li>
+<li>
+<p>今天大家好像也都不想复习了，就来写这份总结</p>
+</li>
+<li>
+<p>博客的代码框不知道为啥变回黄色了，可能是 Linux  下 hugo 的锅，反正懒得再改了（</p>
+</li>
+</ul>
+<h2 id="技术栈">技术栈</h2>
+<ul>
+<li>node.js</li>
+<li>koa</li>
+<li>socket.io</li>
+<li>客户端</li>
+<li>服务端</li>
+</ul>
+<h2 id="koa">koa</h2>
+<blockquote>
+<p><a href="https://koa.bootcss.com/">Koa</a>是一个基于 Node.js 平台的下一代 web 开发框架。</p>
+</blockquote>
+<p><del>上半节课用原生 node 写的 http 服务器代码忘记放哪里去了，反正 koa 10行代码就能搞定</del></p>
+<h3 id="注意">注意</h3>
+<p><code>koa</code>代码全写在<strong>后端程序</strong>里面</p>
+<h3 id="引入">引入</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">Koa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">serve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa-static&#39;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="模板">模板</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 初始化
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">hostname</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">publicPath</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">);</span>
+
+<span class="c1">// 创建koa实例
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Koa</span><span class="p">();</span>
+
+<span class="c1">// 创建http server 实例
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">callback</span><span class="p">());</span>
+<span class="cm">/*
+</span><span class="cm">   code here...
+</span><span class="cm"> */</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">serve</span><span class="p">(</span><span class="nx">publicPath</span><span class="p">));</span>
+
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;listening...&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="socketio">socket.io</h2>
+<blockquote>
+<p><a href="https://socketio.bootcss.com/">Socket.IO</a> 是一个可以在浏览器与服务器之间实现实时、双向、基于事件的通信的工具库。</p>
+</blockquote>
+<p><del>写这部分代码太痛苦了，写错了一个对象一直没发现，还以为是 wsl 的问题</del></p>
+<h3 id="注意-1">注意</h3>
+<p>socket.io在客户端最好不要使用本地引用，好像会出锅？控制台一直会报错，不知道为啥</p>
+<h3 id="服务端">服务端</h3>
+<h5 id="主框架">主框架</h5>
+<p>以下代码写在上面的<strong>koa代码</strong>的<code>code here</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/*
+</span><span class="cm">   以下代码是写在上面的koa代码的 code here 处的
+</span><span class="cm"> */</span>
+
+<span class="c1">//创建 socket.io实例
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">socketIO</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+
+<span class="c1">//储存在线所有用户
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">historys</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="c1">// 客户端接入
+</span><span class="c1"></span><span class="nx">io</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">socket</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_ACCOUNT&#39;</span><span class="p">));</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">password</span> <span class="o">!==</span> <span class="s1">&#39;j10c&#39;</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;wrong password&#34;</span><span class="p">);</span>
+		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_PASSWORD&#39;</span><span class="p">));</span>
+	<span class="p">}</span>
+	<span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
+	<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+	<span class="nx">users</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span> <span class="c1">// 在表中储存用户消息
+</span><span class="c1"></span>	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users====&#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+	<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 注意 sockets ！！！
+</span><span class="c1"></span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span> <span class="c1">//transport close
+</span><span class="c1"></span>		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
+		<span class="nx">users</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users ==== &#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+		<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 服务端向所有客户端发送数据 io.sockets.emit
+</span><span class="c1"></span>	<span class="p">});</span>
+
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
+		<span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
+			<span class="nx">time</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+			<span class="nx">sender</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+			<span class="nx">content</span><span class="o">:</span> <span class="nx">content</span>
+		<span class="p">};</span>
+		<span class="nx">historys</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+		<span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span><span class="c1">// 服务端向所有其他客户端发送数据
+</span><span class="c1"></span>	<span class="p">});</span>
+
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+		<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
+	<span class="p">});</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="io实例"><code>io</code>实例</h4>
+<p>主要代码分成两部分<code>io.use</code> 和<code>io.on</code></p>
+<p>服务端的<code>socket</code>是<code>io.use</code>或者<code>io.on</code>中调回函数中的一个参数，所以<code>socket.on</code>是写在<code>io.on(){}</code>函数里面的，注意！！！</p>
+<h4 id="发送数据">发送数据</h4>
+<p><code>io.sockets.emit(eventName, data)</code>，<code>io.sockets.send(data)</code></p>
+<p>如代码中的<code>io.sockets.emit('online', [...users.keys()]); </code>，即向所有已经建立连接的<strong>客户端</strong>发送数据</p>
+<h4 id="广播">广播</h4>
+<p><code>socket.broadcast.emit</code>或者<code>socket.broadcast.emit</code>，向所有已建立连接的<strong>其他客户端</strong>发送数据**（注意和<code>io.sockets.emit</code>的区分！！！）**</p>
+<h4 id="区分">区分</h4>
+<p>在这个项目中，用户向房间发送消息之后，他自己的消息同时发到本地缓存和服务器，服务器无需再给该用户发送消息数据！所以用<code>socket.broadcast.emit</code></p>
+<h3 id="客户端">客户端</h3>
+<h4 id="程序流程">程序流程</h4>
+<p>登录，检查登录成功与否，获取历史消息</p>
+<h4 id="主框架-1">主框架</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">socket</span><span class="p">;</span> <span class="c1">//开头先声明 socket 为全局变量
+</span><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#submit&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()=&gt;{</span>
+		<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
+			<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
+			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+		<span class="p">},</span>
+		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+	<span class="p">});</span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+		<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+	<span class="p">});</span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect_error&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">users</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span> <span class="c1">// 监听服务端发来的数据
+</span><span class="c1"></span>	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+<span class="p">}</span>
+                                                       
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#sent_message&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
+<span class="p">})</span><span class="err">；</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="解析">解析</h4>
+<p>在第一次用到<code>socket</code>的时候给变量赋值，下面的代码是在**登录(login)**的时候就用到了</p>
+<p><strong>注意区分服务端和客户端中的 <code>socket</code>！！！</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">login</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">account</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">password</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+	<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
+		<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
+			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+		<span class="p">},</span>
+		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+	<span class="p">});</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>客户端的<code>socket.emit(eventName, data, [callback])</code>作用为给服务端发送数据，服务端通过<code>socket.on(eventName, (data, fn) =&gt; {})</code>创建监听数据事件，两者间通过<code>eventName</code>相互匹配。</li>
+<li><code>[callback]</code>为回调函数，用于指定一个当对方确定接收到数据时调用的回调函数。</li>
+<li>另外一种监听事件<code>socket.once(eventName, (data, fn) =&gt; {})</code>，这个只监听一次，在回调函数执行完毕后，结束监听。</li>
+</ul>
+<h4 id="保留字">保留字</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">//TODO
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="一个很有意思的东西">一个很有意思的东西</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//客户端
+</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+
+<span class="c1">//服务端
+</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>sendMessage</code>中客户端发送了<code>text</code>，服务端中用回调函数中的<code>content</code>参数接收</p>
+<p>而<code>getHsitory</code>中客户端发送了空内容，来请求数据，服务端用另外一个参数<code>fn</code>（应该是个函数），这个函数可以立即将数据发送回去，这个是不是有点类似 get 请求？</p>
+<h2 id="前端代码的一些tips">前端代码的一些tips</h2>
+<ol>
+<li>
+<p>HTML 结构语义化</p>
+</li>
+<li>
+<p>缩进长度两个空格？蚂蚁这位学长的代码风格非常满足我强迫症，<del>然而这篇文章是用 typora写的，代码都是乱贴的，缩进很乱</del></p>
+</li>
+<li>
+<p>元素事件不要直接写在组件上，而是以<code>element.addEventListener('event', function(){})</code>形式写在 <code>js</code> 文件里面</p>
+</li>
+<li>
+<p>尽量不要使用双引号，用单引号？</p>
+</li>
+<li>
+<p>模板字符串</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;j10c&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;im &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`im </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>箭头函数</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;received a message broadcast message:&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+	<span class="nx">addMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">sender</span><span class="p">,</span> <span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
+<span class="p">});</span>
+  
+<span class="c1">// message 是函数的参数，该函数为socket.on(eventName, function(){})函数的一个参数
+</span><span class="c1"></span>  
+<span class="c1">//等价于
+</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">){</span>
+	<span class="c1">// code here...
+</span><span class="c1"></span><span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>如何使用好元素的 <code>classList</code>，看到 CSS 课上给元素添加 animation 淡入淡出的类标签的时候还挺震撼的，以前一直以为<code>class</code>和<code>id</code>本身就是用来区分唯一元素和泛用元素的标签，现在知道了还能把<code>class</code>看作一种单一的属性。</li>
+</ol>
+<h2 id="总结">总结</h2>
+<p>主要还是学了socket.io相关知识，期待寒假的时候有机会再练习一遍。</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/chinatelecom-yes/">
+            <span class="next-text nav-default">ZJUT-PC端闪讯与内网共存</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="copyright" style="display: inline-block;padding-left: 5%;">
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    <span>Copyright</span>
+    <span>
+      &copy; 
+      2019 - 
+      2022</span>
+    
+    
+    <span>By</span>
+    <span>J10c</span>
+  </span>
+</div>
+
+
+
+<div class="social-links" style="display: inline-block;padding-right: 5%;float: right;">
+      <a href="blyb1739@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/j10ccc" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/sunge-40" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://space.bilibili.com/284551798/" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://j10ccc.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
