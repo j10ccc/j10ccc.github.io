@@ -6,7 +6,7 @@
     <description>Recent content on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Feb 2022 12:13:33 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 Feb 2022 13:30:36 +0800</lastBuildDate>
     
 	<atom:link href="http://j10ccc.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>为什么有那么多意思相近却长相不同的单词</title>
       <link>http://j10ccc.github.io/post/history-of-english/</link>
-      <pubDate>Tue, 22 Feb 2022 12:13:33 +0800</pubDate>
+      <pubDate>Tue, 22 Feb 2022 13:30:36 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/history-of-english/</guid>
       <description>背景 刚刚结束新学期的第一节英语课，课堂节奏紧凑，氛围却比较和谐，总的来说感觉以后会学到好多东西，毕竟这个老师非常🐂 第一节课介绍了冬奥会的一些</description>
@@ -22,17 +22,17 @@
     
     <item>
       <title>二月的几个趣事2022</title>
-      <link>http://j10ccc.github.io/post/anecdote-feb-2022/</link>
-      <pubDate>Thu, 17 Feb 2022 10:59:21 +0800</pubDate>
+      <link>http://j10ccc.github.io/post/anecdotes-feb-2022/</link>
+      <pubDate>Thu, 17 Feb 2022 13:30:58 +0800</pubDate>
       
-      <guid>http://j10ccc.github.io/post/anecdote-feb-2022/</guid>
+      <guid>http://j10ccc.github.io/post/anecdotes-feb-2022/</guid>
       <description>静电对笔记本蓝牙的影响 手上这台 小米PRO 笔记本买来有4年了，近两年一直被一个问题困扰，就是电脑用着用着蓝牙断掉，确认了不是外设的问题后重新打</description>
     </item>
     
     <item>
       <title>蚂蚁技术体验部大作业总结</title>
       <link>http://j10ccc.github.io/post/ant-chatroom/</link>
-      <pubDate>Thu, 06 Jan 2022 10:51:56 +0800</pubDate>
+      <pubDate>Thu, 06 Jan 2022 13:32:00 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/ant-chatroom/</guid>
       <description>背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差</description>
@@ -41,7 +41,7 @@
     <item>
       <title>ZJUT-PC端闪讯与内网共存</title>
       <link>http://j10ccc.github.io/post/chinatelecom-yes/</link>
-      <pubDate>Sat, 11 Sep 2021 10:54:26 +0800</pubDate>
+      <pubDate>Sat, 11 Sep 2021 13:32:42 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/chinatelecom-yes/</guid>
       <description>背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一</description>
@@ -50,7 +50,7 @@
     <item>
       <title>致22届某个高三班级</title>
       <link>http://j10ccc.github.io/post/to-seniors/</link>
-      <pubDate>Sun, 01 Aug 2021 18:58:50 +0800</pubDate>
+      <pubDate>Sun, 01 Aug 2021 13:33:06 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/to-seniors/</guid>
       <description>本文的前言 前几天被老师要求给母校现高三某个班级写一篇经验分享，结合真实经历呕心沥血写了2000+字，结果有几句真心话被老师复查后要求删除，实</description>
@@ -59,52 +59,43 @@
     <item>
       <title>毕业之后关于学海平板的处置</title>
       <link>http://j10ccc.github.io/post/xuehaitablet-reborn/</link>
-      <pubDate>Mon, 21 Jun 2021 20:10:25 +0000</pubDate>
+      <pubDate>Mon, 21 Jun 2021 13:27:36 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/xuehaitablet-reborn/</guid>
-      <description>&lt;p&gt;高中毕业学海终于给平板解 MDM 了，备份好以前的课件和照片后，马上准备双清然后 root （这Android9 动画bug太多了。。&lt;/p&gt;</description>
+      <description>高中毕业学海终于给平板解 MDM 了，备份好以前的课件和照片后，马上准备双清然后 root （这Android9 动画bug太多了。。 A：为什么要 ROOT ？ B：这 3G RAM</description>
     </item>
     
     <item>
       <title>不是所有的笔记本都用git同步</title>
-      <link>http://j10ccc.github.io/post/gitnotebook/</link>
-      <pubDate>Tue, 28 Jul 2020 14:16:08 +0000</pubDate>
+      <link>http://j10ccc.github.io/post/git-notebook/</link>
+      <pubDate>Tue, 28 Jul 2020 13:33:27 +0800</pubDate>
       
-      <guid>http://j10ccc.github.io/post/gitnotebook/</guid>
+      <guid>http://j10ccc.github.io/post/git-notebook/</guid>
       <description>背景 最近有在手机上写笔记的需求，去酷安上搜了一下笔记本APP，发现纯纯写作挺好的，强调永不丢失，能多端同步，但是它的 Markdown 渲染功能要付费（在一期</description>
     </item>
     
     <item>
-      <title>新主题开坑（长期更新）</title>
-      <link>http://j10ccc.github.io/post/bookthemecss/</link>
-      <pubDate>Mon, 30 Mar 2020 14:16:08 +0000</pubDate>
-      
-      <guid>http://j10ccc.github.io/post/bookthemecss/</guid>
-      <description>&lt;p&gt;Book 这个 hexo-theme 很开放，也很简陋，Home 要自己写，文章列表也要自己引入，相比于我之前用过的主题完全是两个东西。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>[Fiddler]抓取学习平板上的作业答案</title>
-      <link>http://j10ccc.github.io/post/hackyzy/</link>
-      <pubDate>Fri, 13 Mar 2020 11:42:01 +0000</pubDate>
+      <link>http://j10ccc.github.io/post/hack-yzy/</link>
+      <pubDate>Fri, 13 Mar 2020 13:35:07 +0800</pubDate>
       
-      <guid>http://j10ccc.github.io/post/hackyzy/</guid>
+      <guid>http://j10ccc.github.io/post/hack-yzy/</guid>
       <description>本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学</description>
     </item>
     
     <item>
       <title>对Windows终端的新宋体说拜拜</title>
-      <link>http://j10ccc.github.io/post/font-win-cmd/</link>
-      <pubDate>Sun, 16 Feb 2020 19:51:36 +0000</pubDate>
+      <link>http://j10ccc.github.io/post/cmd-font/</link>
+      <pubDate>Thu, 06 Feb 2020 13:35:37 +0800</pubDate>
       
-      <guid>http://j10ccc.github.io/post/font-win-cmd/</guid>
+      <guid>http://j10ccc.github.io/post/cmd-font/</guid>
       <description>背景 这几天因为疫情，学校在网上开课，但我又刚买了2只舵机，得在树莓派上先搭建好环境，于是就一边上课一边搭建，因为网课限制Windows平台，</description>
     </item>
     
     <item>
       <title>用NAP访问无公网IP的树莓派</title>
       <link>http://j10ccc.github.io/post/nap-proxy/</link>
-      <pubDate>Mon, 03 Feb 2020 20:07:32 +0000</pubDate>
+      <pubDate>Mon, 03 Feb 2020 13:36:01 +0800</pubDate>
       
       <guid>http://j10ccc.github.io/post/nap-proxy/</guid>
       <description>你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS</description>
@@ -112,10 +103,10 @@
     
     <item>
       <title>Windows和Linux共享蓝牙鼠标</title>
-      <link>http://j10ccc.github.io/post/mouse-share/</link>
-      <pubDate>Thu, 16 Jan 2020 20:30:04 +0000</pubDate>
+      <link>http://j10ccc.github.io/post/share-mouse/</link>
+      <pubDate>Thu, 16 Jan 2020 13:36:23 +0800</pubDate>
       
-      <guid>http://j10ccc.github.io/post/mouse-share/</guid>
+      <guid>http://j10ccc.github.io/post/share-mouse/</guid>
       <description>前言 当一台电脑同时安装了Windows&amp;amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便</description>
     </item>
     

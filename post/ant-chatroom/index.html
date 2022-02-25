@@ -43,12 +43,12 @@
 <meta property="og:description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://j10ccc.github.io/post/ant-chatroom/" />
-<meta property="article:published_time" content="2022-01-06T10:51:56+08:00" />
-<meta property="article:modified_time" content="2022-01-06T10:51:56+08:00" />
+<meta property="article:published_time" content="2022-01-06T13:32:00+08:00" />
+<meta property="article:modified_time" content="2022-01-06T13:32:00+08:00" />
 <meta itemprop="name" content="蚂蚁技术体验部大作业总结">
 <meta itemprop="description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差">
-<meta itemprop="datePublished" content="2022-01-06T10:51:56&#43;08:00" />
-<meta itemprop="dateModified" content="2022-01-06T10:51:56&#43;08:00" />
+<meta itemprop="datePublished" content="2022-01-06T13:32:00&#43;08:00" />
+<meta itemprop="dateModified" content="2022-01-06T13:32:00&#43;08:00" />
 <meta itemprop="wordCount" content="2144">
 
 
@@ -181,7 +181,7 @@
 <p>今天大家好像也都不想复习了，就来写这份总结</p>
 </li>
 <li>
-<p>博客的代码框不知道为啥变回黄色了，可能是 Linux  下 hugo 的锅，反正懒得再改了（</p>
+<p>博客的代码框不知道为啥变回黄色了，可能是 Linux 下 hugo 的锅，反正懒得再改了（</p>
 </li>
 </ul>
 <h2 id="技术栈">技术栈</h2>
@@ -388,7 +388,7 @@
 <p>服务端的<code>socket</code>是<code>io.use</code>或者<code>io.on</code>中调回函数中的一个参数，所以<code>socket.on</code>是写在<code>io.on(){}</code>函数里面的，注意！！！</p>
 <h4 id="发送数据">发送数据</h4>
 <p><code>io.sockets.emit(eventName, data)</code>，<code>io.sockets.send(data)</code></p>
-<p>如代码中的<code>io.sockets.emit('online', [...users.keys()]); </code>，即向所有已经建立连接的<strong>客户端</strong>发送数据</p>
+<p>如代码中的<code>io.sockets.emit('online', [...users.keys()]);</code> ，即向所有已经建立连接的<strong>客户端</strong>发送数据</p>
 <h4 id="广播">广播</h4>
 <p><code>socket.broadcast.emit</code>或者<code>socket.broadcast.emit</code>，向所有已建立连接的<strong>其他客户端</strong>发送数据**（注意和<code>io.sockets.emit</code>的区分！！！）**</p>
 <h4 id="区分">区分</h4>
@@ -485,7 +485,7 @@
 <li><code>[callback]</code>为回调函数，用于指定一个当对方确定接收到数据时调用的回调函数。</li>
 <li>另外一种监听事件<code>socket.once(eventName, (data, fn) =&gt; {})</code>，这个只监听一次，在回调函数执行完毕后，结束监听。</li>
 </ul>
-<h4 id="保留字">保留字</h4>
+<h4 id="httpsj10cccxyzpostant-chatroome4bf9de79599e5ad97保留字"><a href="https://j10ccc.xyz/post/ant-chatroom/#%E4%BF%9D%E7%95%99%E5%AD%97"></a>保留字</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -594,11 +594,28 @@
 
     </div>
 
-    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">J10c</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-01-06
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 <footer class="post-footer">
       
       <nav class="post-nav">
-        <a class="prev" href="/post/anecdote-feb-2022/">
+        <a class="prev" href="/post/anecdotes-feb-2022/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">二月的几个趣事2022</span>
             <span class="prev-text nav-mobile">Prev</span>
@@ -666,6 +683,13 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
 
 
 
