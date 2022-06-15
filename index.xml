@@ -6,10 +6,19 @@
     <description>Recent content on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jun 2022 23:55:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jun 2022 00:00:42 +0800</lastBuildDate>
     
 	<atom:link href="http://j10ccc.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 实现简单的搜索结果渲染</title>
+      <link>http://j10ccc.github.io/post/qxy-punch-day3/</link>
+      <pubDate>Thu, 16 Jun 2022 00:00:42 +0800</pubDate>
+      
+      <guid>http://j10ccc.github.io/post/qxy-punch-day3/</guid>
+      <description>这是我参与「第三届青训营 -后端场」笔记创作活动的的第3篇笔记 搜索引擎项目有个需求就是渲染搜索结果条目，为了让条目更加美观，我参考了 Google 的设计，</description>
+    </item>
     
     <item>
       <title>Git-进化-团队协作开发</title>
