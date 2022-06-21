@@ -1,0 +1,117 @@
+
+## 说在前面
+
+> 本文的代码风格为笔者偏好，用于笔者所在的团队，
+文章仅提供配置思路和选择项参考
+
+规范基于 ES6 语法，可能与一些现有的项目不匹配
+
+前端规范要 5 个插件：
+1. ESLint
+2. Prettier
+3. commitLint
+4. styleLint
+5. husky
+
+以及一个配置文件：
+1. `.editorconfig`
+
+
+> 不同编辑器可能需要插件等一些手段来支持这些工具，
+VSCode 配置比较方便，ESLint, Prettier, editorconfig 安装插件即可
+
+> 后期团队内可能会构建一个脚手架，方便直接安装必要的包，~~现在还是老老实实复制粘贴代码吧~~
+
+## 必要的包
+
+```json
+"devDependencies": {
+  "eslint": "^8.0.1",
+  "eslint-config-prettier": "^8.5.0",
+  "eslint-config-standard": "^17.0.0",
+  "eslint-plugin-import": "^2.25.2",
+  "eslint-plugin-n": "^15.0.0",
+  "eslint-plugin-prettier": "^4.0.0",
+  "eslint-plugin-promise": "^6.0.0",
+  "eslint-plugin-react": "^7.29.4",
+  "prettier": "^2.6.2",
+}
+```
+
+## ESLint
+
+```js
+// .eslintrc.js
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true
+  },
+  extends: ["standard", "plugin:prettier/recommended"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: "latest",
+    sourceType: "module"
+  },
+  plugins: ["react", "@typescript-eslint"],
+  rules: {
+    semi: ["error", "always"],
+    quotes: [1, "double"]
+  }
+};
+```
+
+## Prettier
+
+```js
+// perttierrc.js
+module.exports = {
+  printWidth: 80, //单行长度
+  tabWidth: 2, //缩进长度
+  useTabs: false, //使用空格代替tab缩进
+  semi: true, //句末使用分号
+  singleQuote: false, //使用单引号
+  quoteProps: "as-needed", //仅在必需时为对象的key添加引号
+  trailingComma: "none", //多行时尽可能打印尾随逗号, ts 标准
+  bracketSpacing: true, //在对象前后添加空格-eg: { foo: bar }
+  jsxBracketSameLine: true, //多属性html标签的‘>’折行放置
+  arrowParens: "always", //单参数箭头函数参数周围使用圆括号-eg: (x) => x
+  requirePragma: false, //无需顶部注释即可格式化
+  insertPragma: false, //在已被preitter格式化的文件顶部加上标注
+  proseWrap: "preserve", //不知道怎么翻译
+  htmlWhitespaceSensitivity: "ignore", //对HTML全局空白不敏感
+  endOfLine: "lf", //结束行形式
+  embeddedLanguageFormatting: "auto", //对引用代码进行格式化
+  scripts: {
+    format:
+      "onchange './**/*.js' './**/*.ts' './**/*.tsx' -- prettier --write {{changed}}"
+  }
+};
+```
+
+```js
+// .prettierignore
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+```
+
+## editorconfig
+
+```editorconfig
+root = true
+
+[*]
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+charset = utf-8
+```

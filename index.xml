@@ -6,10 +6,19 @@
     <description>Recent content on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Jun 2022 00:00:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2022 23:55:27 +0800</lastBuildDate>
     
 	<atom:link href="http://j10ccc.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>面向团队的前端代码规范</title>
+      <link>http://j10ccc.github.io/post/code-convention-fe/</link>
+      <pubDate>Tue, 21 Jun 2022 23:55:27 +0800</pubDate>
+      
+      <guid>http://j10ccc.github.io/post/code-convention-fe/</guid>
+      <description>说在前面 本文的代码风格为笔者偏好，用于笔者所在的团队， 文章仅提供配置思路和选择项参考 规范基于 ES6 语法，可能与一些现有的项目不匹配 前端规范要 5 个</description>
+    </item>
     
     <item>
       <title>React 实现简单的搜索结果渲染</title>
