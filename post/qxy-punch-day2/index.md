@@ -28,7 +28,7 @@
     
     - 克隆远程仓库
     ```bash
-    git clone ${ssh link}
+    git clone $ssh_link
     ```
     
     此时的本地库会被创建，同时绑定到一个远程库，远程库名字默认为 `origin`
@@ -40,8 +40,9 @@
 
     ```bash
     git init # 将该文件夹变成一个本地仓库(添加了 .git 文件夹)
-    git remote add ${remote repo name} ${repo ssh link}
+    git remote add $remote_repo_name $repo_ssh_link
     ```
+	
     添加远程可以添加多个，名字随便取，但是后期将本地库代码上传到远程的时候，要以名字指定上传到哪个远程库
     
 1. 添加修改文件到暂存区
@@ -61,7 +62,7 @@
 3. 提交暂存区所有内容到本地库
 
     ```bash
-    git commit -m "${commit info}"
+    git commit -m "$commit_info"
    ```
    commit 附加的信息是用自己的话来描述你此次提交修改干了啥，虽然是自己输入，但在团队开发中最好要有个[规范](https://www.jianshu.com/p/201bd81e7dc9)
     > commit 无结尾引号时，在结尾输入换行符会到下一行继续输入 commit，直到输入结尾引号再回车就能完成 commit
@@ -75,18 +76,21 @@
 
     ```bash
     git branch
-    git checkout -b ${new branch name}
-    git checkout ${existed branch name}
+    git checkout -b $new_branch_name
+    git checkout $existed_branch_name
     ```
-    通常地，项目的主分支是 `master`，同时也会添加一个开发分支`dev`，以及一些`feat-something`分支，一般的开发都会在在开发分支中提交修改，`feat`分支用于不同成员开发不同的功能
+	通常地，项目的主分支是 `master`，同时也会添加一个开发分支`dev`，以及一些`feat-something`分支，一般的开发都会在在开发分支中提交修改，`feat`分支用于不同成员开发不同的功能
     
     
 5. 查看当前分支下的所有 commit 
+
     ```bash
     git log
     ```
+	
 6. 合并分支
 当一个功能基本上完善了之后，需要合并`fix`提交并
+
 ## 进阶操作
 
 ### 修改默认编辑器
@@ -98,23 +102,71 @@
     editor=vim
 ```
 
-push
-pull
-git graph
-merge
+### 将当前分支的 commit 推送到远程库
+
+要推送到 origin 库的**同名分支**下，push 后面不加任何参数，默认推送到 origin 库的同名分支下
+
+```bash
+# now in branch dev
+git push origin dev
+
+git push
+```
+### 拉取远程库最新的提交
+
+如果远程库的当前分支的提交记录被更新了，但是本地却还是旧的版本，可以使用 pull 命令来更新（不是同步，本地库独有的提交记录不会被覆盖）提交，注意如果本地库有未完成的提交，需要先完成提交再进行 pull 操作
+```bash
+git pull
+```
+
+### 发起分支合并
+
+在 feat 分支下完成了功能的开发可以将其合并到 master 分支
+
+```bash
+# now in branch feat
+git checkout master
+git merge feat
+```
 
 ### 修改提交信息
 
-打开编辑器，修改最近一次提交信息，就是 commit 的内容
+打开编辑器，修改最近一次提交信息
 
 ```bash
 git commit --amend
+```
+
+### 添加版本信息
+
+前端项目可以结合 `child_process` 在 runtime 自动获取 git 提交版本信息，渲染到页面上
+
+```bash
+git tag $version_string
 ```
 
 ### 清理提交信息
 
 `git rebase` 的作用是**清理、整合** commit 列表，在合作开发中有很重要的作用
 
-> 这个操作非常危险，他能合并多条 commit 成一条，并且此操作时不可逆的，即无法查看每条 commit 到底修改了什么，各条commit信息都合在一起了，只能看到合并的这堆commit修改了什么。
+> 这个操作非常危险，他能合并多条 commit 成一条，并且此操作时不可逆的，即无法查看每条 commit 到底修改了什么，各条 commit 信息都合在一起了，只能看到合并的这堆 commit 修改了什么。
+	
+下面列举了两个常见的场景：
+1. 开发到一半，有换设备同步开发的需求，需要临时上传代码到远程库，这个时候 commit 信息就可以随便写点，到开发完了将无用的临时 commit 合并，正经写一次提交信息
+2. 一个 feature 的开发需要多次 commit，但是将这么多的 commit 合并到主分支时显得有点繁琐，在主分支下可以合并多次的提交信息为一条 commit，当然 feat 分支仍然保存着每次 commit 的具体内容
+3. 将没用的 merge commit 隐藏掉
 
-下面列举了几个常见的场景
+[![jym56J.png](https://s1.ax1x.com/2022/07/10/jym56J.png)](https://imgtu.com/i/jym56J)
+如图所示，我想要将`d576d7b` ~ `36f5e7e`这几次 commit 合并成一条 commit，则需要选择`36f5e7e`的前一条 commit `cb759ee`
+> 注意，这些 commit 按照提交时间顺序排序，选择的那条 commit 一定是这几条中提交时间最早的
+
+```bash
+git rebase -i cb759ee
+```
+然后会打开 git 默认的编辑器，保持最早的 commit 前为`pick`，其他的都是`s`就行了，保存之后会引导编辑合并后的 commit 信息，将默认保留的提交信息注释掉，重新写即可
+
+# 推荐
+
+VSCode 上有 [Git graph](https://github.com/mhutchie/vscode-git-graph) 插件，可以直观的检查该项目的所有提交记录，分支信息，远程库，Tags等
+
+[![jyEg2j.png](https://s1.ax1x.com/2022/07/10/jyEg2j.png)](https://imgtu.com/i/jyEg2j)

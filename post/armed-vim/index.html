@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>J10c&#39;s Blog</title>
+  <title>武装到牙齿的 Vim - React配置篇 - J10c&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#984a59">
 
 
-<meta name="author" content="J10c" />
+<meta name="author" content="J10c" /><meta name="description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
-<link rel="canonical" href="http://j10ccc.github.io/" />
-  <link href="http://j10ccc.github.io/index.xml" rel="alternate" type="application/rss+xml" title="J10c&#39;s Blog" />
-  <link href="http://j10ccc.github.io/index.xml" rel="feed" type="application/rss+xml" title="J10c&#39;s Blog" />
+<link rel="canonical" href="http://j10ccc.github.io/post/armed-vim/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="J10c&#39;s Blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://j10ccc.github.io/" />
-<meta property="og:updated_time" content="2022-06-21T23:55:27+08:00" />
-<meta itemprop="name" content="J10c&#39;s Blog">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="J10c&#39;s Blog"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="武装到牙齿的 Vim - React配置篇" />
+<meta property="og:description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://j10ccc.github.io/post/armed-vim/" />
+<meta property="article:published_time" content="2022-06-21T23:54:30+08:00" />
+<meta property="article:modified_time" content="2022-06-21T23:54:30+08:00" />
+<meta itemprop="name" content="武装到牙齿的 Vim - React配置篇">
+<meta itemprop="description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管">
+<meta itemprop="datePublished" content="2022-06-21T23:54:30&#43;08:00" />
+<meta itemprop="dateModified" content="2022-06-21T23:54:30&#43;08:00" />
+<meta itemprop="wordCount" content="193">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="武装到牙齿的 Vim - React配置篇"/>
+<meta name="twitter:description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -119,38 +125,137 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/share-mouse/">Windows和Linux共享蓝牙鼠标</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-01-16 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      前言 当一台电脑同时安装了Windows&amp;Linux双系统（本文以Deepin15.11为例）时，每当切换到另一个操作系统，蓝牙鼠标便
-      <a href="/post/share-mouse/">······</a>
-    </div>
-    <div class="read-more">
-      <a href="/post/share-mouse/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/3/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
+          <article class="post">
     
-  </nav>
+    <header class="post-header">
+      <h1 class="post-title">武装到牙齿的 Vim - React配置篇</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-06-21 </span>
+        
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+    <li><a href="#tmux">tmux</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><a href="https://imgtu.com/i/jrcBy4"><img src="https://s1.ax1x.com/2022/07/09/jrcBy4.png" alt="jrcBy4.md.png"></a></p>
+<h2 id="feature">Feature</h2>
+<ul>
+<li>JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验</li>
+<li>方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换</li>
+<li>完整的文件管理方案</li>
+<li>Markdown 的深度适配</li>
+<li>其他语言代码有基本的编辑器能力支持</li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul>
+<li>[]</li>
+</ul>
+<h1 id="tmux">tmux</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># set -g default-terminal &#34;xterm-256color&#34;</span>
+<span class="c1"># set -ga terminal-overrides &#34;,*256col*:Tc&#34;</span>
+<span class="c1"># set -ga terminal-overrides &#34;,xterm-256color:Tc&#34;</span>
+<span class="c1"># action key</span>
+**
+unbind C-b
+set-option -g prefix C-t
+set-option -g repeat-time <span class="m">0</span>
+
+<span class="c1"># vim-like pane switching</span>
+<span class="nb">bind</span> -r k <span class="k">select</span>-pane -U
+<span class="nb">bind</span> -r j <span class="k">select</span>-pane -D
+<span class="nb">bind</span> -r h <span class="k">select</span>-pane -L
+<span class="nb">bind</span> -r l <span class="k">select</span>-pane -R
+
+# 
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>C-T</code> + <code>P(N)</code> switch previous (next) window</li>
+<li><code>C-S-Left(Right)</code> move window in status bar</li>
+<li><code>C-T</code> + <code>C</code>  create window</li>
+<li><code>C-T</code> + <code>H(JKL)</code> swich focus</li>
+<li></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">J10c</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-06-21
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/code-convention-fe/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">面向团队的前端代码规范</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/qxy-punch-day3/">
+            <span class="next-text nav-default">React 实现简单的搜索结果渲染</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
