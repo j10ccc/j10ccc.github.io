@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/nap-proxy/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="用NAP访问无公网IP的树莓派" />
 <meta property="og:description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/nap-proxy/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/nap-proxy/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-02-03T13:36:01+08:00" />
 <meta property="article:modified_time" content="2020-02-03T13:36:01+08:00" />
+
 <meta itemprop="name" content="用NAP访问无公网IP的树莓派">
-<meta itemprop="description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS">
-<meta itemprop="datePublished" content="2020-02-03T13:36:01&#43;08:00" />
-<meta itemprop="dateModified" content="2020-02-03T13:36:01&#43;08:00" />
-<meta itemprop="wordCount" content="834">
-
-
-
+<meta itemprop="description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS"><meta itemprop="datePublished" content="2020-02-03T13:36:01+08:00" />
+<meta itemprop="dateModified" content="2020-02-03T13:36:01+08:00" />
+<meta itemprop="wordCount" content="833">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="用NAP访问无公网IP的树莓派"/>
 <meta name="twitter:description" content="你是否厌倦了puttty,Xshell的平庸外表，是否厌倦了在外地无法访问家中的树莓派，而运营商却死活不给固定IP，并且为树莓派买一个VPS"/>
@@ -172,21 +169,21 @@
 <p>Raspbian默认没有安装<code>openssh-service</code>，先用<code>putty</code>内网连接树莓派，使用<code>apt</code>安装<code>openssh-service</code>，完成后修改<code>sshd_config</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo vim /etc/ssh/sshd_config
-<span class="c1">#修改： #PasswordAuthentication yes 为： PasswordAuthentication yes</span>
-<span class="c1">#修改： PermitRootLogin prohibit-password 为： PermitRootLogin yes</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo vim /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl"><span class="c1">#修改： #PasswordAuthentication yes 为： PasswordAuthentication yes</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#修改： PermitRootLogin prohibit-password 为： PermitRootLogin yes</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="注册下载">注册下载</h3>
 <p>先照着Napyy的<a href="https://napyy.com/blog/nap-tutorial/" title="官方文档1">官方文档</a>注册，下载arm客户端到树莓派，解压压缩包（本文解压到了根目录<code>/home/pi/nap_linux_arm</code>）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -196,81 +193,79 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">#结构目录</span>
-pi@raspberrypi:~ $ tree
-.
-└── nap_linux_arm
-    ├── nap
-    ├── nap.ini
-    ├── nohup.out
-    └── start.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1">#结构目录</span>
+</span></span><span class="line"><span class="cl">pi@raspberrypi:~ $ tree
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── nap_linux_arm
+</span></span><span class="line"><span class="cl">    ├── nap
+</span></span><span class="line"><span class="cl">    ├── nap.ini
+</span></span><span class="line"><span class="cl">    ├── nohup.out
+</span></span><span class="line"><span class="cl">    └── start.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="尝试开启nap">尝试开启nap</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ ./nap
-INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> login to server success
-INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> proxy added: <span class="o">[</span>tcp<span class="o">]</span>
-INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> start <span class="o">[</span>tcp<span class="o">]</span> proxy success
-INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> forwarding napy.xyz:XXXXX -&gt; 127.0.0.1:22
-<span class="c1">#如果出现上面这样的输出说明与主机连接成功</span>
-<span class="c1">#下面检验是否成功穿透，当前终端让他运行着，打开另一个终端</span>
-$ ssh -oport<span class="o">={</span><span class="nv">$REMOTE_PORT</span><span class="o">}</span> pi@<span class="o">{</span><span class="nv">$YOUR_HOST_ID</span><span class="o">}</span>
-<span class="c1">#第一次连接会提示输入yes,接着输入密码就连接成功</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ ./nap
+</span></span><span class="line"><span class="cl">INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> login to server success
+</span></span><span class="line"><span class="cl">INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> proxy added: <span class="o">[</span>tcp<span class="o">]</span>
+</span></span><span class="line"><span class="cl">INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> start <span class="o">[</span>tcp<span class="o">]</span> proxy success
+</span></span><span class="line"><span class="cl">INFO<span class="o">[</span>2020-01-19T21:44:48+08:00<span class="o">]</span> forwarding napy.xyz:XXXXX -&gt; 127.0.0.1:22
+</span></span><span class="line"><span class="cl"><span class="c1">#如果出现上面这样的输出说明与主机连接成功</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#下面检验是否成功穿透，当前终端让他运行着，打开另一个终端</span>
+</span></span><span class="line"><span class="cl">$ ssh -oport<span class="o">={</span><span class="nv">$REMOTE_PORT</span><span class="o">}</span> pi@<span class="o">{</span><span class="nv">$YOUR_HOST_ID</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#第一次连接会提示输入yes,接着输入密码就连接成功</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="配置启动脚本">配置启动脚本</h2>
 <p>在客户端目录下编写启动脚本<code>start.sh</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
-</span><span class="cp"></span><span class="nb">cd</span> /home/pi/nap_linux_arm <span class="c1">#nap_linux_arm为客户端文件夹名</span>
-nohup ./nap <span class="p">&amp;</span> <span class="c1">#使用nohup命令，使nap在后台运行</span>
-<span class="c1"># 使用nohup命令，会在同级目录下创建nohup.out来打印命令输出</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">cd</span> /home/pi/nap_linux_arm <span class="c1">#nap_linux_arm为客户端文件夹名</span>
+</span></span><span class="line"><span class="cl">nohup ./nap <span class="p">&amp;</span> <span class="c1">#使用nohup命令，使nap在后台运行</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用nohup命令，会在同级目录下创建nohup.out来打印命令输出</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>给<code>start.sh</code>添加权限</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo chmod <span class="m">777</span> start.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo chmod <span class="m">777</span> start.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以先运行脚本，如果后台无nap进程，请查看<code>nohup.out</code>分析错误原因。</p>
 <p>将脚本文件添加到启动项中</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ sudo vim /etc/rc.local
-<span class="c1">#找到&#34;exit 0&#34;的上一行，插入:</span>
-/home/pi/nap_linux_arm/start.sh start
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo vim /etc/rc.local
+</span></span><span class="line"><span class="cl"><span class="c1">#找到&#34;exit 0&#34;的上一行，插入:</span>
+</span></span><span class="line"><span class="cl">/home/pi/nap_linux_arm/start.sh start
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="结束">结束</h2>
 <p>重启树莓派，等一会儿（开机和启动nap要时间），终端输入<code>ssh -oport={$REMOTE_PORT} pi@{$YOUR_HOST_ID}</code>，根据提示输入密码即可成功连接，另外可以根据<a href="https://napyy.com/blog/nap-custom-domains/" title="官方文档2">官方文档</a>将<code>YOUR_HOST_ID</code>自定义为你自己的域名。</p>
@@ -379,7 +374,7 @@ nohup ./nap <span class="p">&amp;</span> <span class="c1">#使用nohup命令，�
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

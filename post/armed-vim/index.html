@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/armed-vim/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="武装到牙齿的 Vim - React配置篇" />
 <meta property="og:description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/armed-vim/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/armed-vim/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-21T23:54:30+08:00" />
 <meta property="article:modified_time" content="2022-06-21T23:54:30+08:00" />
+
 <meta itemprop="name" content="武装到牙齿的 Vim - React配置篇">
-<meta itemprop="description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管">
-<meta itemprop="datePublished" content="2022-06-21T23:54:30&#43;08:00" />
-<meta itemprop="dateModified" content="2022-06-21T23:54:30&#43;08:00" />
+<meta itemprop="description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管"><meta itemprop="datePublished" content="2022-06-21T23:54:30+08:00" />
+<meta itemprop="dateModified" content="2022-06-21T23:54:30+08:00" />
 <meta itemprop="wordCount" content="193">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="武装到牙齿的 Vim - React配置篇"/>
 <meta name="twitter:description" content="Feature JSX / TSX 语法检测(TSServer/ESLint)，不亚于 VSCode 的补全体验 方便且全面快捷键操作，包括 Buffer, Tab, Window 切换，Tmux window 创建与切换 完整的文件管"/>
@@ -170,7 +167,7 @@
 <h1 id="tmux">tmux</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -188,23 +185,23 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># set -g default-terminal &#34;xterm-256color&#34;</span>
-<span class="c1"># set -ga terminal-overrides &#34;,*256col*:Tc&#34;</span>
-<span class="c1"># set -ga terminal-overrides &#34;,xterm-256color:Tc&#34;</span>
-<span class="c1"># action key</span>
-**
-unbind C-b
-set-option -g prefix C-t
-set-option -g repeat-time <span class="m">0</span>
-
-<span class="c1"># vim-like pane switching</span>
-<span class="nb">bind</span> -r k <span class="k">select</span>-pane -U
-<span class="nb">bind</span> -r j <span class="k">select</span>-pane -D
-<span class="nb">bind</span> -r h <span class="k">select</span>-pane -L
-<span class="nb">bind</span> -r l <span class="k">select</span>-pane -R
-
-# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># set -g default-terminal &#34;xterm-256color&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># set -ga terminal-overrides &#34;,*256col*:Tc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># set -ga terminal-overrides &#34;,xterm-256color:Tc&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># action key</span>
+</span></span><span class="line"><span class="cl">**
+</span></span><span class="line"><span class="cl">unbind C-b
+</span></span><span class="line"><span class="cl">set-option -g prefix C-t
+</span></span><span class="line"><span class="cl">set-option -g repeat-time <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># vim-like pane switching</span>
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> -r k <span class="k">select</span>-pane -U
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> -r j <span class="k">select</span>-pane -D
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> -r h <span class="k">select</span>-pane -L
+</span></span><span class="line"><span class="cl"><span class="nb">bind</span> -r l <span class="k">select</span>-pane -R
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>C-T</code> + <code>P(N)</code> switch previous (next) window</li>
@@ -316,7 +313,7 @@ set-option -g repeat-time <span class="m">0</span>
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

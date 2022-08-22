@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/chinatelecom-yes/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="ZJUT-PC端闪讯与内网共存" />
 <meta property="og:description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/chinatelecom-yes/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/chinatelecom-yes/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-09-11T13:32:42+08:00" />
 <meta property="article:modified_time" content="2021-09-11T13:32:42+08:00" />
+
 <meta itemprop="name" content="ZJUT-PC端闪讯与内网共存">
-<meta itemprop="description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一">
-<meta itemprop="datePublished" content="2021-09-11T13:32:42&#43;08:00" />
-<meta itemprop="dateModified" content="2021-09-11T13:32:42&#43;08:00" />
+<meta itemprop="description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一"><meta itemprop="datePublished" content="2021-09-11T13:32:42+08:00" />
+<meta itemprop="dateModified" content="2021-09-11T13:32:42+08:00" />
 <meta itemprop="wordCount" content="2460">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ZJUT-PC端闪讯与内网共存"/>
 <meta name="twitter:description" content="背景 看到朵朵里面好多人在商量电信转移动的事情，心里很难受。要知道校外电信口碑碾压移动，在校内，一次选课后，电信怎么就爆炸了呢？ 跨专业学习了一"/>
@@ -203,7 +200,7 @@
 <p>再输入<code>route print</code>，打开<strong>路由表</strong>，应该会看到类似以下的字样（顺序乱了没事）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -212,14 +209,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">IPv4 路由表
-===========================================================================
-活动路由:
-网络目标           网络掩码               网关               接口         跃点数
-0.0.0.0           0.0.0.0            在链路上     115.200.94.163            36
-0.0.0.0           0.0.0.0         172.28.0.1        172.28.94.29          4261
-0.0.0.0           0.0.0.0           ${网关IP}         ${对应接口}          4556
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">IPv4 路由表
+</span></span><span class="line"><span class="cl">===========================================================================
+</span></span><span class="line"><span class="cl">活动路由:
+</span></span><span class="line"><span class="cl">网络目标           网络掩码               网关               接口         跃点数
+</span></span><span class="line"><span class="cl">0.0.0.0           0.0.0.0            在链路上     115.200.94.163            36
+</span></span><span class="line"><span class="cl">0.0.0.0           0.0.0.0         172.28.0.1        172.28.94.29          4261
+</span></span><span class="line"><span class="cl">0.0.0.0           0.0.0.0           ${网关IP}         ${对应接口}          4556
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="原理">原理</h3>
 <p>解释一下三个解析<code>0.0.0.0</code>的路由，接口<code>115</code>开头的是 NetKeeper 拨号的路由，<code>172</code>开头的是有线网卡的路由，他们两个负责解析<strong>内外网 IP</strong>。下面以<code>10</code>开头的是无线网卡的路由， 也负责解析内外网IP，因为跃点数越低的路由优先级越高，所以我们输入内网网址<code>192.168.210.112</code>时，负责解析的网关是 NetKeeper 的网关，那当然解析不到内网主机，下面将内网路由添加到<strong>永久路由</strong>（也叫静态路由，跃点数为 1，优先级最高），为了防止内网网口解析外网 IP，所以我们指定解析特定的 IP段。</p>
@@ -227,56 +224,56 @@
 <p>输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">delete</span> <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">对应接口</span><span class="p">}</span>
-<span class="c">#三个网关冲突了，所以选择删除内网路由</span>
-<span class="c">#注意中间空格</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">route</span> <span class="n">delete</span> <span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">128</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">对应接口</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">#三个网关冲突了，所以选择删除内网路由</span>
+</span></span><span class="line"><span class="cl"><span class="c">#注意中间空格</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>下面添加确定的 IP，专门使用内网连接</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">210</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
-<span class="c"># ${ip} 为网关 IP，请根据实际修改</span>
-<span class="c"># -p 是添加到永久路由的参数，拉高优先级，同时防止电脑重启后需要手动重新配置</span>
-<span class="c">#内网登录的 IP 为 192.168.210.112，以 192.168.210.0 为网络号有效避免与电脑上其他内网服务擦枪走火</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">210</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ${ip} 为网关 IP，请根据实际修改</span>
+</span></span><span class="line"><span class="cl"><span class="c"># -p 是添加到永久路由的参数，拉高优先级，同时防止电脑重启后需要手动重新配置</span>
+</span></span><span class="line"><span class="cl"><span class="c">#内网登录的 IP 为 192.168.210.112，以 192.168.210.0 为网络号有效避免与电脑上其他内网服务擦枪走火</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>当然还要添加<code>172</code>开头的内网 IP，因为选课的 IP 为<code>172.16.19.163</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">172</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
-<span class="c">#这边没有考虑其他网卡需要访问172开头的IP，我寻思也用不到啊，如果需要，按照上面的步骤修改命令</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="n">172</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="n">mask</span> <span class="n">255</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">#这边没有考虑其他网卡需要访问172开头的IP，我寻思也用不到啊，如果需要，按照上面的步骤修改命令</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面添加的路由都会在<strong>路由表</strong>里面显示，如果觉得需要再次修改（删除再添加），请执行以下命令</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">route</span> <span class="n">-p</span> <span class="n">delete</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
-<span class="c">#删除路由时三个参数要跟路由表里面的其中一条路由对应上，不然命令会执行失败</span>
-<span class="c">#含-p 是删除永久路由，如果要删除活动路由，则不需要加 -p</span>
-<span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span> <span class="c">#添加你想要的路由</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">route</span> <span class="n">-p</span> <span class="n">delete</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">#删除路由时三个参数要跟路由表里面的其中一条路由对应上，不然命令会执行失败</span>
+</span></span><span class="line"><span class="cl"><span class="c">#含-p 是删除永久路由，如果要删除活动路由，则不需要加 -p</span>
+</span></span><span class="line"><span class="cl"><span class="n">route</span> <span class="n">-p</span> <span class="n">add</span> <span class="p">${</span><span class="n">负责解析的网络号</span><span class="p">/</span><span class="n">IP</span><span class="p">}</span> <span class="n">mask</span> <span class="p">${</span><span class="n">子网掩码</span><span class="p">}</span> <span class="p">${</span><span class="n">网关IP</span><span class="p">}</span> <span class="c">#添加你想要的路由</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后去访问一下内网登录网页<code>192.168.210.112</code>，应该是能访问了。</p>
 <p>以上只添加了<code>192.168.210</code>和<code>172.0.0.0</code>两个网络号，如果以后有内网的 IP 属于其他的网络号的话，手动添加到路由表里面</p>
@@ -386,7 +383,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

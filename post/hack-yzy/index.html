@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/hack-yzy/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="[Fiddler]抓取学习平板上的作业答案" />
 <meta property="og:description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/hack-yzy/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/hack-yzy/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-03-13T13:35:07+08:00" />
 <meta property="article:modified_time" content="2020-03-13T13:35:07+08:00" />
+
 <meta itemprop="name" content="[Fiddler]抓取学习平板上的作业答案">
-<meta itemprop="description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学">
-<meta itemprop="datePublished" content="2020-03-13T13:35:07&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-13T13:35:07&#43;08:00" />
-<meta itemprop="wordCount" content="1625">
-
-
-
+<meta itemprop="description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学"><meta itemprop="datePublished" content="2020-03-13T13:35:07+08:00" />
+<meta itemprop="dateModified" content="2020-03-13T13:35:07+08:00" />
+<meta itemprop="wordCount" content="1623">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Fiddler]抓取学习平板上的作业答案"/>
 <meta name="twitter:description" content="本文所有涉及个人隐私内容均已打码，如有观看不便，敬请谅解。 背景 这一切得从一只蝙蝠说起。 学校上学期发了一个三星学习平板，装载着与 知名教育公司学"/>
@@ -197,7 +194,7 @@
 <p>对这条数据仔细分析一下，不难发现里面有很多已经出现在云作业APP中的作业名称，而且几乎每个作业信息的格式都是一样的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -221,29 +218,29 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json">   <span class="p">{</span>
-     <span class="nt">&#34;workId&#34;</span><span class="p">:</span> <span class="s2">&#34;${WORKID}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;studentWorkId&#34;</span><span class="p">:</span> <span class="s2">&#34;${STUDENTWORDID}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;teacherId&#34;</span><span class="p">:</span> <span class="s2">&#34;${TEACHERID}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;haveSeen&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-     <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;${NAME}&#34;</span><span class="p">,</span> <span class="err">//作业名称</span>
-     <span class="nt">&#34;postscript&#34;</span><span class="p">:</span> <span class="s2">&#34;${POSTSCRIPT}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;createTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${CREATEIME}&#34;</span><span class="p">,</span> <span class="err">//单位:ms</span>
-     <span class="nt">&#34;updateTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPDATETIME}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;uptoTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPTOTIME}&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-     <span class="nt">&#34;schedule&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-     <span class="nt">&#34;period&#34;</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span>
-     <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-     <span class="nt">&#34;selfScore&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-     <span class="nt">&#34;emendNum&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-     <span class="nt">&#34;contentUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;http://xhfs2.oss-cn-hangzhou.aliyuncs.com${ADRESS}.txt&#34;</span><span class="p">,</span>
-     <span class="err">//此处省略多行</span>
-     <span class="nt">&#34;inputAssociate&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-     <span class="nt">&#34;preDownloadUrls&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-     <span class="nt">&#34;publishTime&#34;</span><span class="p">:</span> <span class="mi">0</span>
-   <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;workId&#34;</span><span class="p">:</span> <span class="s2">&#34;${WORKID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;studentWorkId&#34;</span><span class="p">:</span> <span class="s2">&#34;${STUDENTWORDID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;teacherId&#34;</span><span class="p">:</span> <span class="s2">&#34;${TEACHERID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;haveSeen&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;${NAME}&#34;</span><span class="p">,</span> <span class="c1">//作业名称
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nt">&#34;postscript&#34;</span><span class="p">:</span> <span class="s2">&#34;${POSTSCRIPT}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;createTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${CREATEIME}&#34;</span><span class="p">,</span> <span class="c1">//单位:ms
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nt">&#34;updateTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPDATETIME}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;uptoTime&#34;</span><span class="p">:</span> <span class="s2">&#34;${UPTOTIME}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;schedule&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;period&#34;</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;selfScore&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;emendNum&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;contentUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;http://xhfs2.oss-cn-hangzhou.aliyuncs.com${ADRESS}.txt&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">//此处省略多行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="nt">&#34;inputAssociate&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;preDownloadUrls&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;publishTime&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>我抓的明明是作业的信息，可是为什么一个题目都没有显示？</p>
 <p>令人好奇的是，每条作业信息中<code>contentUrl</code>属性值为一个 URL ，指向的是一个 TXT 文件，我下载来一看</p>
@@ -251,7 +248,7 @@
 <p><strong>入眼的是满满的答案啊！</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -303,64 +300,64 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json">   <span class="p">{</span>
-     <span class="nt">&#34;isCustomScore&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-     <span class="nt">&#34;lectureInfoList&#34;</span><span class="p">:</span> <span class="p">[],</span>
-     <span class="nt">&#34;questionAnswers&#34;</span><span class="p">:</span> <span class="p">[</span>
-       <span class="p">{</span>
-         <span class="nt">&#34;answerContent&#34;</span><span class="p">:</span> <span class="s2">&#34;A&#34;</span><span class="p">,</span>  <span class="err">//答案</span>
-         <span class="nt">&#34;answerContentType&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-         <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="err">//此值可以为1,2,3...表示同一题的多个答案</span>
-         <span class="nt">&#34;inputType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-         <span class="nt">&#34;keyboardType&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;optionNum&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-         <span class="nt">&#34;orgIndex&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
-         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mi">20000</span>  <span class="err">//分数，单位</span><span class="p">:</span><span class="mi">10</span><span class="err">^</span><span class="mi">-4</span><span class="err">分</span>
-       <span class="p">}</span>
-       
-       <span class="err">//此处省略多行</span>
-     <span class="p">],</span>
-     <span class="nt">&#34;questionPoolContentInfos&#34;</span><span class="p">:</span> <span class="p">[</span>
-    	<span class="p">{</span>
-         <span class="nt">&#34;bookId&#34;</span><span class="p">:</span> <span class="s2">&#34;${BOOKID}&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;catalogId&#34;</span><span class="p">:</span> <span class="s2">&#34;${CATALOGID}&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;checkType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;deleteType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;difficulty&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;drawingUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;errorRate&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;explainContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${EXPLAINCONTENT}&#34;</span><span class="p">,</span> <span class="err">//题目答案解析</span>
-         <span class="nt">&#34;explainContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;isAllDoFlag&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-         <span class="nt">&#34;isEncrypt&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;isTitle&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;isWrongQuestion&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;listeningUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;lockInputType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;parentQuestionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${PARENTQUESTIONID}&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;questionLayoutType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-         <span class="nt">&#34;questionSystemType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-         <span class="nt">&#34;questionUserType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-         <span class="nt">&#34;stemContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${STEMCONTENT}&#34;</span><span class="p">,</span> <span class="err">//题面</span>
-         <span class="nt">&#34;stemContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-         <span class="nt">&#34;totalScores&#34;</span><span class="p">:</span> <span class="mi">40000</span><span class="p">,</span> 
-         <span class="nt">&#34;verifyStatus&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="nt">&#34;workRollVersion&#34;</span><span class="p">:</span> <span class="mi">0</span>
-       <span class="p">}</span>
-       <span class="err">//省略多行</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;isCustomScore&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;lectureInfoList&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;questionAnswers&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">       <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;answerContent&#34;</span><span class="p">:</span> <span class="s2">&#34;A&#34;</span><span class="p">,</span>  <span class="c1">//答案
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nt">&#34;answerContentType&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1">//此值可以为1,2,3...表示同一题的多个答案
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nt">&#34;inputType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;keyboardType&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;optionNum&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;orgIndex&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mi">20000</span>  <span class="c1">//分数，单位:10^-4分
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">       <span class="c1">//此处省略多行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="p">],</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;questionPoolContentInfos&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;bookId&#34;</span><span class="p">:</span> <span class="s2">&#34;${BOOKID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;catalogId&#34;</span><span class="p">:</span> <span class="s2">&#34;${CATALOGID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;checkType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;deleteType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;difficulty&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;drawingUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;errorRate&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;explainContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${EXPLAINCONTENT}&#34;</span><span class="p">,</span> <span class="c1">//题目答案解析
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nt">&#34;explainContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;isAllDoFlag&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;isEncrypt&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;isTitle&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;isWrongQuestion&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;listeningUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;lockInputType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;parentQuestionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${PARENTQUESTIONID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;questionId&#34;</span><span class="p">:</span> <span class="s2">&#34;${QUESTIONID}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;questionLayoutType&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;questionSystemType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;questionUserType&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;stemContent&#34;</span><span class="p">:</span> <span class="s2">&#34;${STEMCONTENT}&#34;</span><span class="p">,</span> <span class="c1">//题面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>         <span class="nt">&#34;stemContentType&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;subject&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;totalScores&#34;</span><span class="p">:</span> <span class="mi">40000</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;verifyStatus&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;workRollVersion&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">       <span class="c1">//省略多行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>不仅有答案，还有题目和题目解析，看来这个月的作业和考试都不愁了，哈哈哈哈哈</p>
 <h2 id="导出答案">导出答案</h2>
 <p>我写了一个 Python3 脚本 :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -417,68 +414,66 @@
 </span><span class="lnt">55
 </span><span class="lnt">56
 </span><span class="lnt">57
-</span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="s1">&#39;&#39;&#39;
-</span><span class="s1">    运行环境：
-</span><span class="s1">    Linux Ubuntu18.04 WSL，需要安装wget
-</span><span class="s1">    代码有BUG，多选题答案的各个答案会被当做多道单选题的答案
-</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">glob</span>
-
-<span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">subjectlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;语文&#39;</span><span class="p">,</span><span class="s1">&#39;数学&#39;</span><span class="p">,</span><span class="s1">&#39;英语&#39;</span><span class="p">,</span><span class="s1">&#39;物理&#39;</span><span class="p">,</span><span class="s1">&#39;政治&#39;</span><span class="p">,</span><span class="s1">&#39;技术&#39;</span><span class="p">]</span>
-<span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">):</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&#34;[ANS] &#34;</span> <span class="o">+</span> <span class="n">fn</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;w&#34;</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Finished creating ANSWER!&#34;</span><span class="p">)</span>
-	
-<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;r&#34;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">eachline</span> <span class="ow">in</span> <span class="nb">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">22</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;      &#34;answerContent&#34;:&#39;</span><span class="p">:</span>
-            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-            <span class="n">mystr</span> <span class="o">=</span> <span class="n">eachline</span><span class="p">[</span><span class="mi">23</span><span class="p">:]</span>
-            <span class="c1">#mylist = eachline.split(&#39;:&#39;)</span>
-            <span class="s1">&#39;&#39;&#39;			
-</span><span class="s1">            if &#34;image/png;base64,&#34;  in mystr:
-</span><span class="s1">            		mystr = &#34;data:&#34; + mystr
-</span><span class="s1">            &#39;&#39;&#39;</span>
-            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">:</span>
-                <span class="n">everyans</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">everyans</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
-
-            <span class="k">global</span> <span class="n">ans</span>
-            <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">everyans</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">31</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;  &#34;questionPoolContentInfos&#34;: [&#39;</span><span class="p">:</span>
-            <span class="n">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
-            <span class="k">break</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-    <span class="n">dataurl</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input downloadURL: &#34;</span><span class="p">)</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;wget &#34;</span> <span class="o">+</span> <span class="n">dataurl</span><span class="p">)</span>
-    <span class="n">list1</span> <span class="o">=</span> <span class="n">dataurl</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-    <span class="k">global</span> <span class="n">fn</span>
-    <span class="n">fn</span> <span class="o">=</span> <span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;1.语文 2.数学 3.英语 4.物理 5.政治 6.技术&#34;</span><span class="p">)</span>
-    <span class="k">global</span> <span class="n">subject</span>
-    <span class="n">subject</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input subjectnum: &#34;</span><span class="p">))</span>
-    <span class="n">fn</span> <span class="o">=</span> <span class="s2">&#34;[&#34;</span> <span class="o">+</span> <span class="n">subjectlist</span><span class="p">[</span><span class="n">subject</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;] &#34;</span><span class="o">+</span> <span class="n">fn</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;...&#34;</span> <span class="o">+</span> <span class="n">fn</span><span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">:]</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;---------&#34;</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">+</span> <span class="s2">&#34;---------&#34;</span><span class="p">)</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span><span class="n">fn</span><span class="p">)</span>
-    <span class="n">process</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    运行环境：
+</span></span></span><span class="line"><span class="cl"><span class="s1">    Linux Ubuntu18.04 WSL，需要安装wget
+</span></span></span><span class="line"><span class="cl"><span class="s1">    代码有BUG，多选题答案的各个答案会被当做多道单选题的答案
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">glob</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">subjectlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;语文&#39;</span><span class="p">,</span><span class="s1">&#39;数学&#39;</span><span class="p">,</span><span class="s1">&#39;英语&#39;</span><span class="p">,</span><span class="s1">&#39;物理&#39;</span><span class="p">,</span><span class="s1">&#39;政治&#39;</span><span class="p">,</span><span class="s1">&#39;技术&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&#34;[ANS] &#34;</span> <span class="o">+</span> <span class="n">fn</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;w&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Finished creating ANSWER!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&#34;r&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">eachline</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">22</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;      &#34;answerContent&#34;:&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mystr</span> <span class="o">=</span> <span class="n">eachline</span><span class="p">[</span><span class="mi">23</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#mylist = eachline.split(&#39;:&#39;)</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;&#39;&#39;			
+</span></span></span><span class="line"><span class="cl"><span class="s1">            if &#34;image/png;base64,&#34;  in mystr:
+</span></span></span><span class="line"><span class="cl"><span class="s1">            		mystr = &#34;data:&#34; + mystr
+</span></span></span><span class="line"><span class="cl"><span class="s1">            &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">everyans</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">everyans</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;.  &#34;</span> <span class="o">+</span> <span class="n">mystr</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">global</span> <span class="n">ans</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">everyans</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">eachline</span><span class="p">[:</span><span class="mi">31</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;  &#34;questionPoolContentInfos&#34;: [&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">save_to_file</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dataurl</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input downloadURL: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;wget &#34;</span> <span class="o">+</span> <span class="n">dataurl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">list1</span> <span class="o">=</span> <span class="n">dataurl</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">fn</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fn</span> <span class="o">=</span> <span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;1.语文 2.数学 3.英语 4.物理 5.政治 6.技术&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">subject</span>
+</span></span><span class="line"><span class="cl">    <span class="n">subject</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Please input subjectnum: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fn</span> <span class="o">=</span> <span class="s2">&#34;[&#34;</span> <span class="o">+</span> <span class="n">subjectlist</span><span class="p">[</span><span class="n">subject</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;] &#34;</span><span class="o">+</span> <span class="n">fn</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;...&#34;</span> <span class="o">+</span> <span class="n">fn</span><span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;---------&#34;</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">+</span> <span class="s2">&#34;---------&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span><span class="n">fn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>此脚本会下载答案文件，并自动提取答案</p>
 <h3 id="使用方法">使用方法</h3>
@@ -493,7 +488,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -507,25 +502,23 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">$ ls
-<span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>  <span class="s1">&#39;[政治] 1234...abcd.txt&#39;</span>
-<span class="c1"># [政治] 1234...abcd.txt 是答案源文件</span>
-<span class="c1"># [ANS] [政治] 1234...abcd.txt 是自动生成的答案</span>
-$ cat <span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>
-01.  <span class="s2">&#34;A&#34;</span>,
-02.  <span class="s2">&#34;D&#34;</span>,
-03.  <span class="s2">&#34;D&#34;</span>,
-04.  <span class="s2">&#34;A&#34;</span>,
-05.  <span class="s2">&#34;D&#34;</span>,
-06.  <span class="s2">&#34;D&#34;</span>,
-07.  <span class="s2">&#34;B&#34;</span>,
-08.  <span class="s2">&#34;D&#34;</span>,
-<span class="c1">### 省略若干行，不止能生成选择题！</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>  <span class="s1">&#39;[政治] 1234...abcd.txt&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [政治] 1234...abcd.txt 是答案源文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [ANS] [政治] 1234...abcd.txt 是自动生成的答案</span>
+</span></span><span class="line"><span class="cl">$ cat <span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>
+</span></span><span class="line"><span class="cl">01.  <span class="s2">&#34;A&#34;</span>,
+</span></span><span class="line"><span class="cl">02.  <span class="s2">&#34;D&#34;</span>,
+</span></span><span class="line"><span class="cl">03.  <span class="s2">&#34;D&#34;</span>,
+</span></span><span class="line"><span class="cl">04.  <span class="s2">&#34;A&#34;</span>,
+</span></span><span class="line"><span class="cl">05.  <span class="s2">&#34;D&#34;</span>,
+</span></span><span class="line"><span class="cl">06.  <span class="s2">&#34;D&#34;</span>,
+</span></span><span class="line"><span class="cl">07.  <span class="s2">&#34;B&#34;</span>,
+</span></span><span class="line"><span class="cl">08.  <span class="s2">&#34;D&#34;</span>,
+</span></span><span class="line"><span class="cl"><span class="c1">### 省略若干行，不止能生成选择题！</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="结尾">结尾</h2>
 <p>我得赶紧写作业去了。<del>毕竟开学考是逃不过的。。</del></p>
@@ -632,7 +625,7 @@ $ cat <span class="s1">&#39;[ANS] [政治] 1234...abcd.txt&#39;</span>
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

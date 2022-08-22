@@ -6,10 +6,15 @@
     <description>Recent content in Posts on J10c&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Jun 2022 23:55:27 +0800</lastBuildDate>
-    
-	<atom:link href="http://j10ccc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 21 Aug 2022 16:40:47 +0800</lastBuildDate><atom:link href="http://j10ccc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 Docker 高效部署前端应用</title>
+      <link>http://j10ccc.github.io/post/docker-deploy-webpages/</link>
+      <pubDate>Sun, 21 Aug 2022 16:40:47 +0800</pubDate>
+      
+      <guid>http://j10ccc.github.io/post/docker-deploy-webpages/</guid>
+      <description>废话写在前头 之前写 Brisk-Tab 的时候，就有把个人的页面部署到服务器上，并经常访问，当时的方案是 宝塔 + Nginx 。因为操作傻瓜才用的，而且当时也不太懂运维这块 宝</description>
+    </item>
     
     <item>
       <title>面向团队的前端代码规范</title>

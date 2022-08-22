@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/qxy-punch-day1/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="[青训营]基于联想查词的实现" />
 <meta property="og:description" content="我在掘金上的笔记搬运 https://juejin.cn/post/7095178555968978952 这是我参与「第三届青训营 -后端场」笔记创作活动的的第1篇笔记 我是有 Java 基础的前端，这次被朋友拉下来学习后端，来了解下后端" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/qxy-punch-day1/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/qxy-punch-day1/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-05-08T10:03:26+08:00" />
 <meta property="article:modified_time" content="2022-05-08T10:03:26+08:00" />
+
 <meta itemprop="name" content="[青训营]基于联想查词的实现">
-<meta itemprop="description" content="我在掘金上的笔记搬运 https://juejin.cn/post/7095178555968978952 这是我参与「第三届青训营 -后端场」笔记创作活动的的第1篇笔记 我是有 Java 基础的前端，这次被朋友拉下来学习后端，来了解下后端">
-<meta itemprop="datePublished" content="2022-05-08T10:03:26&#43;08:00" />
-<meta itemprop="dateModified" content="2022-05-08T10:03:26&#43;08:00" />
+<meta itemprop="description" content="我在掘金上的笔记搬运 https://juejin.cn/post/7095178555968978952 这是我参与「第三届青训营 -后端场」笔记创作活动的的第1篇笔记 我是有 Java 基础的前端，这次被朋友拉下来学习后端，来了解下后端"><meta itemprop="datePublished" content="2022-05-08T10:03:26+08:00" />
+<meta itemprop="dateModified" content="2022-05-08T10:03:26+08:00" />
 <meta itemprop="wordCount" content="1412">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[青训营]基于联想查词的实现"/>
 <meta name="twitter:description" content="我在掘金上的笔记搬运 https://juejin.cn/post/7095178555968978952 这是我参与「第三届青训营 -后端场」笔记创作活动的的第1篇笔记 我是有 Java 基础的前端，这次被朋友拉下来学习后端，来了解下后端"/>
@@ -155,6 +152,11 @@
 </nav>
   </div>
 </div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2022-05-08T10:03:26" title="May 8, 2022">May 8, 2022</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
     <div class="post-content">
       <blockquote>
 <p>我在掘金上的笔记搬运</p>
@@ -180,7 +182,7 @@
 <p>复制了 curl 命令格式之后，转换 go 代码粘贴到文件一气呵成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -223,48 +225,48 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;fmt&#34;</span>
-	<span class="s">&#34;io/ioutil&#34;</span>
-	<span class="s">&#34;log&#34;</span>
-	<span class="s">&#34;net/http&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="nx">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
-	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;GET&#34;</span><span class="p">,</span> <span class="s">&#34;https://dict.youdao.com/suggest?num=5&amp;ver=3.0&amp;doctype=json&amp;cache=false&amp;le=en&amp;q=dict&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-	<span class="p">}</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Accept&#34;</span><span class="p">,</span> <span class="s">&#34;application/json, text/plain, */*&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Accept-Language&#34;</span><span class="p">,</span> <span class="s">&#34;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Cache-Control&#34;</span><span class="p">,</span> <span class="s">&#34;no-cache&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Connection&#34;</span><span class="p">,</span> <span class="s">&#34;keep-alive&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Cookie&#34;</span><span class="p">,</span> <span class="s">`已打马`</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">,</span> <span class="s">&#34;https://www.youdao.com&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Pragma&#34;</span><span class="p">,</span> <span class="s">&#34;no-cache&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Referer&#34;</span><span class="p">,</span> <span class="s">&#34;https://www.youdao.com/&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Dest&#34;</span><span class="p">,</span> <span class="s">&#34;empty&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Mode&#34;</span><span class="p">,</span> <span class="s">&#34;cors&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Site&#34;</span><span class="p">,</span> <span class="s">&#34;same-site&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;User-Agent&#34;</span><span class="p">,</span> <span class="s">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 Edg/101.0.1210.39&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua&#34;</span><span class="p">,</span> <span class="s">`&#34; Not A;Brand&#34;;v=&#34;99&#34;, &#34;Chromium&#34;;v=&#34;101&#34;, &#34;Microsoft Edge&#34;;v=&#34;101&#34;`</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua-mobile&#34;</span><span class="p">,</span> <span class="s">&#34;?0&#34;</span><span class="p">)</span>
-	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua-platform&#34;</span><span class="p">,</span> <span class="s">`&#34;Windows&#34;`</span><span class="p">)</span>
-	<span class="nx">resp</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-	<span class="p">}</span>
-	<span class="k">defer</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
-	<span class="nx">bodyText</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-	<span class="p">}</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s\n&#34;</span><span class="p">,</span> <span class="nx">bodyText</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;io/ioutil&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;net/http&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;GET&#34;</span><span class="p">,</span> <span class="s">&#34;https://dict.youdao.com/suggest?num=5&amp;ver=3.0&amp;doctype=json&amp;cache=false&amp;le=en&amp;q=dict&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Accept&#34;</span><span class="p">,</span> <span class="s">&#34;application/json, text/plain, */*&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Accept-Language&#34;</span><span class="p">,</span> <span class="s">&#34;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Cache-Control&#34;</span><span class="p">,</span> <span class="s">&#34;no-cache&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Connection&#34;</span><span class="p">,</span> <span class="s">&#34;keep-alive&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Cookie&#34;</span><span class="p">,</span> <span class="s">`已打马`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">,</span> <span class="s">&#34;https://www.youdao.com&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Pragma&#34;</span><span class="p">,</span> <span class="s">&#34;no-cache&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Referer&#34;</span><span class="p">,</span> <span class="s">&#34;https://www.youdao.com/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Dest&#34;</span><span class="p">,</span> <span class="s">&#34;empty&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Mode&#34;</span><span class="p">,</span> <span class="s">&#34;cors&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Sec-Fetch-Site&#34;</span><span class="p">,</span> <span class="s">&#34;same-site&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;User-Agent&#34;</span><span class="p">,</span> <span class="s">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 Edg/101.0.1210.39&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua&#34;</span><span class="p">,</span> <span class="s">`&#34; Not A;Brand&#34;;v=&#34;99&#34;, &#34;Chromium&#34;;v=&#34;101&#34;, &#34;Microsoft Edge&#34;;v=&#34;101&#34;`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua-mobile&#34;</span><span class="p">,</span> <span class="s">&#34;?0&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;sec-ch-ua-platform&#34;</span><span class="p">,</span> <span class="s">`&#34;Windows&#34;`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">resp</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">bodyText</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s\n&#34;</span><span class="p">,</span> <span class="nx">bodyText</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>请求头参数很多，自己写的话会麻烦，就使用在线平台转换了，<del>利用现成工具解决问题也是程序员要修炼的</del></p>
 <h2 id="分析处理请求">分析处理请求</h2>
@@ -272,45 +274,45 @@
 <p>在<code>main</code>函数开头添加</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span> <span class="s">`usage: simpleDict WORD example: simpleDict hello`</span><span class="p">)</span>
-    <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="nx">word</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// word 就是我们要查询的单词
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span> <span class="s">`usage: simpleDict WORD example: simpleDict hello`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">word</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// word 就是我们要查询的单词
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>再把 <code>word</code> 拼接到请求 URL 中就能得到返回的 JSON 字符串了，现在我们要做的就是美化工作</p>
 <h2 id="分析返回数据">分析返回数据</h2>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6a40a28a154e4e749abda3f1ecdf700c~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;result&#34;</span><span class="p">:{</span><span class="nt">&#34;msg&#34;</span><span class="p">:</span><span class="s2">&#34;success&#34;</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span><span class="nt">&#34;data&#34;</span><span class="p">:{</span><span class="nt">&#34;entries&#34;</span><span class="p">:[{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;abbr. 词典，字典（dictionary）&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;v. 命令，规定；影响，支配；口述，使听写; n. 命令，规定; n. 命令；指示&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictate&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 字典；词典&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictionary&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 口述，听写；命令，发号施令&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictation&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 独裁者；专横的人&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictator&#34;</span><span class="p">}],</span><span class="nt">&#34;query&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">,</span><span class="nt">&#34;language&#34;</span><span class="p">:</span><span class="s2">&#34;en&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">}}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;result&#34;</span><span class="p">:{</span><span class="nt">&#34;msg&#34;</span><span class="p">:</span><span class="s2">&#34;success&#34;</span><span class="p">,</span><span class="nt">&#34;code&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span><span class="nt">&#34;data&#34;</span><span class="p">:{</span><span class="nt">&#34;entries&#34;</span><span class="p">:[{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;abbr. 词典，字典（dictionary）&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;v. 命令，规定；影响，支配；口述，使听写; n. 命令，规定; n. 命令；指示&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictate&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 字典；词典&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictionary&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 口述，听写；命令，发号施令&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictation&#34;</span><span class="p">},{</span><span class="nt">&#34;explain&#34;</span><span class="p">:</span><span class="s2">&#34;n. 独裁者；专横的人&#34;</span><span class="p">,</span><span class="nt">&#34;entry&#34;</span><span class="p">:</span><span class="s2">&#34;dictator&#34;</span><span class="p">}],</span><span class="nt">&#34;query&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">,</span><span class="nt">&#34;language&#34;</span><span class="p">:</span><span class="s2">&#34;en&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;dict&#34;</span><span class="p">}}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以看到，联想词和翻译都已经有了</p>
 <p><code>entries</code>数组中的所有元素？拿来吧你！</p>
 <p>于是我飞快地写下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">item</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">bodyText</span><span class="p">.</span><span class="nx">entries</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">item</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">bodyText</span><span class="p">.</span><span class="nx">entries</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>结果。。报错了</p>
 <p>我一看，发现<code>bodyText</code>的类型是<code>byte</code>数组，是一个扁平的结构，所以不能直接用 JS 的方式访问成员。</p>
@@ -320,7 +322,7 @@
 <p>要想访问就得把它反序列化才行，先去写个结构体</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -349,34 +351,34 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">DictReponse</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Result</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Msg</span> <span class="kt">string</span> <span class="s">`json:&#34;msg&#34;`</span>
-        <span class="nx">Code</span> <span class="kt">int</span> <span class="s">`json:&#34;code&#34;`</span>
-    <span class="p">}</span> <span class="s">`json:&#34;result&#34;`</span>
-    <span class="nx">Data</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">Entries</span> <span class="p">[]</span><span class="kd">struct</span> <span class="p">{</span>
-            <span class="nx">Explain</span> <span class="kt">string</span> <span class="s">`json:&#34;explain&#34;`</span>
-            <span class="nx">Entry</span> <span class="kt">string</span> <span class="s">`json:&#34;entry&#34;`</span>
-        <span class="p">}</span> <span class="s">`json:&#34;entries&#34;`</span>
-        <span class="nx">Query</span> <span class="kt">string</span> <span class="s">`json:&#34;query&#34;`</span>
-        <span class="nx">Language</span> <span class="kt">string</span> <span class="s">`json:&#34;language&#34;`</span>
-        <span class="nx">Type</span> <span class="kt">string</span> <span class="s">`json:&#34;type&#34;`</span>
-    <span class="p">}</span> <span class="s">`json:&#34;data&#34;`</span>
-<span class="p">}</span>
-
-<span class="c1">// some code here...
-</span><span class="c1"></span>
-<span class="kd">var</span> <span class="nx">dictResponse</span> <span class="nx">DictResponse</span>
-<span class="nx">err</span> <span class="p">=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">bodyText</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">dictResponse</span><span class="p">)</span>
-<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-    <span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">item</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">dictResponse</span><span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">Entries</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s : %s\n&#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">Entry</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">Explain</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">DictReponse</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Result</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Msg</span> <span class="kt">string</span> <span class="s">`json:&#34;msg&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Code</span> <span class="kt">int</span> <span class="s">`json:&#34;code&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="s">`json:&#34;result&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Data</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Entries</span> <span class="p">[]</span><span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">Explain</span> <span class="kt">string</span> <span class="s">`json:&#34;explain&#34;`</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">Entry</span> <span class="kt">string</span> <span class="s">`json:&#34;entry&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="s">`json:&#34;entries&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Query</span> <span class="kt">string</span> <span class="s">`json:&#34;query&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Language</span> <span class="kt">string</span> <span class="s">`json:&#34;language&#34;`</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Type</span> <span class="kt">string</span> <span class="s">`json:&#34;type&#34;`</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="s">`json:&#34;data&#34;`</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// some code here...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dictResponse</span> <span class="nx">DictResponse</span>
+</span></span><span class="line"><span class="cl"><span class="nx">err</span> <span class="p">=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">bodyText</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">dictResponse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">item</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">dictResponse</span><span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">Entries</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s : %s\n&#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">Entry</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">Explain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/40f760709d0d4b08a9f53713495140a8~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>滴～ 提前下班</p>
@@ -483,7 +485,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

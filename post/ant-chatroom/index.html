@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/ant-chatroom/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="蚂蚁技术体验部大作业总结" />
 <meta property="og:description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/ant-chatroom/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/ant-chatroom/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-01-06T13:32:00+08:00" />
 <meta property="article:modified_time" content="2022-01-06T13:32:00+08:00" />
+
 <meta itemprop="name" content="蚂蚁技术体验部大作业总结">
-<meta itemprop="description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差">
-<meta itemprop="datePublished" content="2022-01-06T13:32:00&#43;08:00" />
-<meta itemprop="dateModified" content="2022-01-06T13:32:00&#43;08:00" />
-<meta itemprop="wordCount" content="2144">
-
-
-
+<meta itemprop="description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差"><meta itemprop="datePublished" content="2022-01-06T13:32:00+08:00" />
+<meta itemprop="dateModified" content="2022-01-06T13:32:00+08:00" />
+<meta itemprop="wordCount" content="2143">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="蚂蚁技术体验部大作业总结"/>
 <meta name="twitter:description" content="背景 这次前端课收获颇丰，蚂蚁高层讲师水平高，代码风格棒，教学态度也很好，课堂氛围融洽~~（第一节课的老师甚至跟我聊起了 HHKB）~~ 期末还差"/>
@@ -207,22 +204,22 @@
 <h3 id="引入">引入</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">Koa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">serve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa-static&#39;</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Koa</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">serve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;koa-static&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="模板">模板</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -243,26 +240,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 初始化
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">hostname</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">publicPath</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">);</span>
-
-<span class="c1">// 创建koa实例
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Koa</span><span class="p">();</span>
-
-<span class="c1">// 创建http server 实例
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">callback</span><span class="p">());</span>
-<span class="cm">/*
-</span><span class="cm">   code here...
-</span><span class="cm"> */</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">serve</span><span class="p">(</span><span class="nx">publicPath</span><span class="p">));</span>
-
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;listening...&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">hostname</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">publicPath</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 创建koa实例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Koa</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 创建http server 实例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">callback</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">   code here...
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">serve</span><span class="p">(</span><span class="nx">publicPath</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;listening...&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="socketio">socket.io</h2>
 <blockquote>
@@ -276,7 +273,7 @@
 <p>以下代码写在上面的<strong>koa代码</strong>的<code>code here</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -332,61 +329,61 @@
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/*
-</span><span class="cm">   以下代码是写在上面的koa代码的 code here 处的
-</span><span class="cm"> */</span>
-
-<span class="c1">//创建 socket.io实例
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">socketIO</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
-
-<span class="c1">//储存在线所有用户
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
-<span class="kr">const</span> <span class="nx">historys</span> <span class="o">=</span> <span class="p">[];</span>
-
-<span class="c1">// 客户端接入
-</span><span class="c1"></span><span class="nx">io</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">socket</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
-	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_ACCOUNT&#39;</span><span class="p">));</span>
-	<span class="p">}</span>
-	<span class="k">if</span> <span class="p">(</span><span class="nx">password</span> <span class="o">!==</span> <span class="s1">&#39;j10c&#39;</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;wrong password&#34;</span><span class="p">);</span>
-		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_PASSWORD&#39;</span><span class="p">));</span>
-	<span class="p">}</span>
-	<span class="nx">next</span><span class="p">();</span>
-<span class="p">});</span>
-
-<span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
-	<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-	<span class="nx">users</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span> <span class="c1">// 在表中储存用户消息
-</span><span class="c1"></span>	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users====&#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
-	<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 注意 sockets ！！！
-</span><span class="c1"></span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span> <span class="c1">//transport close
-</span><span class="c1"></span>		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
-		<span class="nx">users</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users ==== &#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
-		<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 服务端向所有客户端发送数据 io.sockets.emit
-</span><span class="c1"></span>	<span class="p">});</span>
-
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
-		<span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
-			<span class="nx">time</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
-			<span class="nx">sender</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
-			<span class="nx">content</span><span class="o">:</span> <span class="nx">content</span>
-		<span class="p">};</span>
-		<span class="nx">historys</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-		<span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span><span class="c1">// 服务端向所有其他客户端发送数据
-</span><span class="c1"></span>	<span class="p">});</span>
-
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
-	<span class="p">});</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">   以下代码是写在上面的koa代码的 code here 处的
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//创建 socket.io实例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">socketIO</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//储存在线所有用户
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">historys</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 客户端接入
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">io</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">socket</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">password</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_ACCOUNT&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nx">password</span> <span class="o">!==</span> <span class="s1">&#39;j10c&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;wrong password&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">next</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;WRONG_PASSWORD&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">handshake</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">users</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span> <span class="c1">// 在表中储存用户消息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users====&#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 注意 sockets ！！！
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span> <span class="c1">//transport close
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user connected&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">users</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">socket</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;users ==== &#39;</span><span class="p">,</span> <span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">[...</span><span class="nx">users</span><span class="p">.</span><span class="nx">keys</span><span class="p">()]);</span> <span class="c1">// 服务端向所有客户端发送数据 io.sockets.emit
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">time</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">sender</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">content</span><span class="o">:</span> <span class="nx">content</span>
+</span></span><span class="line"><span class="cl">		<span class="p">};</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">historys</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">socket</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span><span class="c1">// 服务端向所有其他客户端发送数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="io实例"><code>io</code>实例</h4>
 <p>主要代码分成两部分<code>io.use</code> 和<code>io.on</code></p>
@@ -404,7 +401,7 @@
 <h4 id="主框架-1">主框架</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -426,40 +423,38 @@
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">socket</span><span class="p">;</span> <span class="c1">//开头先声明 socket 为全局变量
-</span><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-	<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#submit&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()=&gt;{</span>
-		<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
-			<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
-			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
-		<span class="p">},</span>
-		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	<span class="p">});</span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
-	<span class="p">});</span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect_error&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{});</span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">users</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span> <span class="c1">// 监听服务端发来的数据
-</span><span class="c1"></span>	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
-<span class="p">}</span>
-                                                       
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#sent_message&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
-<span class="p">})</span><span class="err">；</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">socket</span><span class="p">;</span> <span class="c1">//开头先声明 socket 为全局变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#submit&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()=&gt;{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">});</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+</span></span><span class="line"><span class="cl">	<span class="p">});</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connect_error&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">users</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span> <span class="c1">// 监听服务端发来的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">                                                       
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#sent_message&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="err">；</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="解析">解析</h4>
 <p>在第一次用到<code>socket</code>的时候给变量赋值，下面的代码是在**登录(login)**的时候就用到了</p>
 <p><strong>注意区分服务端和客户端中的 <code>socket</code>！！！</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -472,18 +467,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">login</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-	<span class="kd">var</span> <span class="nx">account</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
-	<span class="kd">var</span> <span class="nx">password</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
-	<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
-		<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
-			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
-			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
-		<span class="p">},</span>
-		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-	<span class="p">});</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">login</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">account</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">password</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">name</span><span class="o">:</span> <span class="nx">account</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">reconnection</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>客户端的<code>socket.emit(eventName, data, [callback])</code>作用为给服务端发送数据，服务端通过<code>socket.on(eventName, (data, fn) =&gt; {})</code>创建监听数据事件，两者间通过<code>eventName</code>相互匹配。</li>
@@ -493,16 +488,16 @@
 <h4 id="httpsj10cccxyzpostant-chatroome4bf9de79599e5ad97保留字"><a href="https://j10ccc.xyz/post/ant-chatroom/#%E4%BF%9D%E7%95%99%E5%AD%97"></a>保留字</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">//TODO
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//TODO
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="一个很有意思的东西">一个很有意思的东西</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -515,18 +510,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//客户端
-</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
-<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
-
-<span class="c1">//服务端
-</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
-<span class="p">});</span>
-<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//客户端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//服务端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sendMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34; send a message: &#34;</span> <span class="o">+</span> <span class="nx">content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;getHistory&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fn</span><span class="p">(</span><span class="nx">historys</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>sendMessage</code>中客户端发送了<code>text</code>，服务端中用回调函数中的<code>content</code>参数接收</p>
 <p>而<code>getHsitory</code>中客户端发送了空内容，来请求数据，服务端用另外一个参数<code>fn</code>（应该是个函数），这个函数可以立即将数据发送回去，这个是不是有点类似 get 请求？</p>
@@ -550,22 +545,22 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;j10c&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;im &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`im </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;j10c&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;im &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`im </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="6">
 <li>箭头函数</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -578,18 +573,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;received a message broadcast message:&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
-	<span class="nx">addMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">sender</span><span class="p">,</span> <span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
-<span class="p">});</span>
-  
-<span class="c1">// message 是函数的参数，该函数为socket.on(eventName, function(){})函数的一个参数
-</span><span class="c1"></span>  
-<span class="c1">//等价于
-</span><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">){</span>
-	<span class="c1">// code here...
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;received a message broadcast message:&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">addMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">sender</span><span class="p">,</span> <span class="nx">message</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1">// message 是函数的参数，该函数为socket.on(eventName, function(){})函数的一个参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  
+</span></span><span class="line"><span class="cl"><span class="c1">//等价于
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;receiveMessage&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// code here...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="7">
 <li>如何使用好元素的 <code>classList</code>，看到 CSS 课上给元素添加 animation 淡入淡出的类标签的时候还挺震撼的，以前一直以为<code>class</code>和<code>id</code>本身就是用来区分唯一元素和泛用元素的标签，现在知道了还能把<code>class</code>看作一种单一的属性。</li>
@@ -699,7 +694,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

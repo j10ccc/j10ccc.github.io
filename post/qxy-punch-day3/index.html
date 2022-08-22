@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="http://j10ccc.github.io/post/qxy-punch-day3/" />
@@ -35,24 +35,21 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.d4461fc67eb76cdbd1405275d14b8e3cd5a3d172bda5237f3c0591468430e9fe.css" rel="stylesheet">
+<link href="/sass/main.min.44d9022ddb079c4674088ed76be26bb0769790e6a8220aeced782adec35fc346.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="React 实现简单的搜索结果渲染" />
 <meta property="og:description" content="这是我参与「第三届青训营 -后端场」笔记创作活动的的第3篇笔记 搜索引擎项目有个需求就是渲染搜索结果条目，为了让条目更加美观，我参考了 Google 的设计，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://j10ccc.github.io/post/qxy-punch-day3/" />
+<meta property="og:url" content="http://j10ccc.github.io/post/qxy-punch-day3/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-16T00:00:42+08:00" />
 <meta property="article:modified_time" content="2022-06-16T00:00:42+08:00" />
+
 <meta itemprop="name" content="React 实现简单的搜索结果渲染">
-<meta itemprop="description" content="这是我参与「第三届青训营 -后端场」笔记创作活动的的第3篇笔记 搜索引擎项目有个需求就是渲染搜索结果条目，为了让条目更加美观，我参考了 Google 的设计，">
-<meta itemprop="datePublished" content="2022-06-16T00:00:42&#43;08:00" />
-<meta itemprop="dateModified" content="2022-06-16T00:00:42&#43;08:00" />
+<meta itemprop="description" content="这是我参与「第三届青训营 -后端场」笔记创作活动的的第3篇笔记 搜索引擎项目有个需求就是渲染搜索结果条目，为了让条目更加美观，我参考了 Google 的设计，"><meta itemprop="datePublished" content="2022-06-16T00:00:42+08:00" />
+<meta itemprop="dateModified" content="2022-06-16T00:00:42+08:00" />
 <meta itemprop="wordCount" content="893">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React 实现简单的搜索结果渲染"/>
 <meta name="twitter:description" content="这是我参与「第三届青训营 -后端场」笔记创作活动的的第3篇笔记 搜索引擎项目有个需求就是渲染搜索结果条目，为了让条目更加美观，我参考了 Google 的设计，"/>
@@ -175,7 +172,7 @@
 <p>后端的搜索数据是爬取的人民日报文章数据，其中Content是整篇文章的内容（返回的内容过长，有删改</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -183,13 +180,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="mi">1729</span><span class="p">,</span>
-    <span class="nt">&#34;URL&#34;</span><span class="p">:</span> <span class="s2">&#34;http://paper.people.com.cn/rmrb/html/2021-10/06/nw.D110000renmrb_20211006_5-01.htm&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;有了社区食堂，真暖心（奋斗百年路 启航新征程·同心奔小康）&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;Content&#34;</span><span class="p">:</span> <span class="s2">&#34;　　中午时分，年过八旬的郑州市金水区甲院社区居民张玉玲和几位老姐妹相继走进社区食堂。&#34;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="mi">1729</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;URL&#34;</span><span class="p">:</span> <span class="s2">&#34;http://paper.people.com.cn/rmrb/html/2021-10/06/nw.D110000renmrb_20211006_5-01.htm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;有了社区食堂，真暖心（奋斗百年路 启航新征程·同心奔小康）&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Content&#34;</span><span class="p">:</span> <span class="s2">&#34;　　中午时分，年过八旬的郑州市金水区甲院社区居民张玉玲和几位老姐妹相继走进社区食堂。&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="需求分析">需求分析</h2>
 <ol>
@@ -208,7 +205,7 @@
 <p>先找到第一个关键词，然后向前寻找第一个标点符号，从标点符号后面的内容即是要保留的内容。数了一下，页面显示两行摘要大概是 80 个字符，所以我们保留 100 个字符，这样就获得摘要啦</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -220,38 +217,38 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">const</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">keyWord</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/[^A-Za-z0-9\u4e00-\u9fa5+]/g</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">pos</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">pos</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="k">break</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span>
-  <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="nx">i</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">&lt;=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="nx">pos</span> <span class="o">+</span> <span class="nx">100</span> : <span class="kt">item.content.length</span>
-<span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">keyWord</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/[^A-Za-z0-9\u4e00-\u9fa5+]/g</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="nx">pos</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">&lt;=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="nx">pos</span> <span class="o">+</span> <span class="nx">100</span> : <span class="kt">item.content.length</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="url-渲染">URL 渲染</h2>
 <p>首先要区分颜色，先分出 <code>baseURL</code>，我使用正则</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">const</span> <span class="nx">pattern</span>: <span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/^(http:\/\/|https:\/\/)[^/]+\//</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">baseURL</span> <span class="o">=</span> <span class="nx">pattern</span>
-  <span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-  <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pattern</span>: <span class="kt">RegExp</span> <span class="o">=</span> <span class="sr">/^(http:\/\/|https:\/\/)[^/]+\//</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">baseURL</span> <span class="o">=</span> <span class="nx">pattern</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">pattern</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后把后面的路径中的<code>/</code>替换成其他符号，我这里选择了<code>&gt;</code>，当然也可以用 emoji 连接😁</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -260,19 +257,19 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kd">let</span> <span class="nx">s</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-<span class="nx">url</span>
-  <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">baseURL</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-  <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">s</span> <span class="o">+=</span> <span class="s2">&#34; &gt; &#34;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">;</span>
-  <span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">s</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">baseURL</span> <span class="o">+</span> <span class="s2">&#34;/&#34;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">s</span> <span class="o">+=</span> <span class="s2">&#34; &gt; &#34;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>最后渲染出来</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -283,22 +280,22 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// 对于链接过长溢出，我使用了 antd 的 Typography 来处理
-</span><span class="c1"></span><span class="k">return</span> <span class="p">(</span>
-  <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">ellipsis</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;fit-width&#34;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">fontFamily</span><span class="o">:</span> <span class="s2">&#34;monospace&#34;</span> <span class="p">}}</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;black&#34;</span> <span class="p">}}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">baseURL</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
-      <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;gray&#34;</span> <span class="p">}}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">s</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
-    <span class="o">&lt;</span><span class="err">/a&gt;</span>
-  <span class="o">&lt;</span><span class="err">/Text&gt;</span>
-<span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="c1">// 对于链接过长溢出，我使用了 antd 的 Typography 来处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">Text</span> <span class="na">ellipsis</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;fit-width&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">fontFamily</span><span class="o">:</span> <span class="s2">&#34;monospace&#34;</span> <span class="p">}}&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;black&#34;</span> <span class="p">}}&gt;{</span><span class="nx">baseURL</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="p">{{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;gray&#34;</span> <span class="p">}}&gt;{</span><span class="nx">s</span><span class="p">}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="关键词高亮">关键词高亮</h2>
 <p>对于较短的摘要和结果标题，先切片再拼接将内容和关键词独立出来</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -313,25 +310,25 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">RichText</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">plainText</span><span class="p">,</span> <span class="nx">keyWord</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">plainText</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">keyWord</span><span class="p">);</span>
-
-  <span class="k">return</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span>: <span class="kt">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span>
-        <span class="p">{</span><span class="nx">item</span><span class="p">}</span>
-        <span class="p">{</span><span class="nx">index</span> <span class="o">!==</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;danger&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">keyWord</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Text&gt; : null}</span>
-      <span class="o">&lt;</span><span class="err">/span&gt;</span>
-    <span class="p">);</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">RichText</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">plainText</span><span class="p">,</span> <span class="nx">keyWord</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">plainText</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">keyWord</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span>: <span class="kt">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">item</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">index</span> <span class="o">!==</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">?</span> <span class="p">&lt;</span><span class="nt">Text</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;danger&#34;</span><span class="p">&gt;{</span><span class="nx">keyWord</span><span class="p">}&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span> <span class="o">:</span> <span class="kc">null</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>最后再像这样渲染出来就行啦</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -344,18 +341,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kd">function</span> <span class="nx">RETitle</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">keyWord</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
-  
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">ellipsis</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">RichText</span> <span class="nx">plainText</span><span class="o">=</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span> <span class="nx">keyWord</span><span class="o">=</span><span class="p">{</span><span class="nx">keyWord</span><span class="p">}</span> <span class="o">/&gt;</span>
-      <span class="o">&lt;</span><span class="err">/a&gt;</span>
-    <span class="o">&lt;</span><span class="err">/Text&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">RETitle</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">keyWord</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Text</span> <span class="na">ellipsis</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">RichText</span> <span class="na">plainText</span><span class="o">=</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span> <span class="na">keyWord</span><span class="o">=</span><span class="p">{</span><span class="nx">keyWord</span><span class="p">}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Text</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -460,7 +457,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {
