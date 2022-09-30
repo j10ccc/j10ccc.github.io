@@ -3,14 +3,21 @@
   
   <url>
     <loc>http://j10ccc.github.io/</loc>
-    <lastmod>2022-08-21T16:40:47+08:00</lastmod>
+    <lastmod>2022-08-31T15:46:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://j10ccc.github.io/post/</loc>
-    <lastmod>2022-08-21T16:40:47+08:00</lastmod>
+    <lastmod>2022-08-31T15:46:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://j10ccc.github.io/post/post-illusion/</loc>
+    <lastmod>2022-08-31T15:46:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
